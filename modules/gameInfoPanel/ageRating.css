@@ -1,0 +1,35 @@
+.age-classifications {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 10px 15px;
+    justify-content: center;
+    align-items: start;
+}
+
+.age-classifications > * {
+    max-width: 80px;  /* ancho máximo de cada celda */
+    width: 100%;      /* que ocupe el espacio disponible hasta el máximo */
+    margin: 0 auto;   /* centra la celda si sobra espacio */
+}
+
+.age-classification {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+
+.age-classification img {
+    width: 100%;
+    object-fit: contain;
+    display: block;
+    align-self: center;
+}
+
+.age-classification .age-restriction-name {
+    font-size: 0.8rem;
+    font-weight: 200;
+}

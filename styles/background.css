@@ -1,0 +1,36 @@
+/* font */
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+/* background image */
+body {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: var(--bg-image);
+    min-height: 100vh;
+    width: 100%;
+
+}
+
+body.helldiver-background {
+    --bg-image: url('../assets/imgs/background/helldivers-2-editorial-galactic-war-background-desktop-01-en-26jan24.webp');
+}
+
+@media (max-width: 800px) {
+    body {
+        background-attachment: scroll;
+    }
+    body.helldiver-background {
+        --bg-image: url('../assets/imgs/background/helldivers-2-editorial-galactic-war-background-mobile-01-en-26jan24.webp');
+    }
+}
+
+/* contents */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}

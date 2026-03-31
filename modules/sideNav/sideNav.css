@@ -1,0 +1,48 @@
+#menu-toggle {
+    display: none; /* oculto por defecto */
+    position: fixed;
+    top: 70px;
+    right: 10px;
+    font-size: 2rem;
+    background: rgba(255,255,255,0.9);
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    z-index: 10000;
+    cursor: pointer;
+}
+
+.page-toc {
+    position: fixed;
+    top: 70px;
+    right: 10px;
+    background: rgba(255,255,255,0.95);
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 250px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    z-index: 9999;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+@media (max-width: 1200px) {
+    #menu-toggle {
+        display: block; /* botón visible */
+    }
+
+    .page-toc {
+        transform: translateX(100%); /* fuera de la pantalla */
+        opacity: 0;
+        pointer-events: none; /* no clicable */
+        top: 140px;
+        right: 10px;
+    }
+
+    .page-toc.open {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+
+    }
+}
