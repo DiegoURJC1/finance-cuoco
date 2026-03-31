@@ -1,18 +1,26 @@
-/* font */
 body {
     font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 0; /* put content on top */
 }
 
-/* background image */
-body {
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: var(--bg-image);
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
     background-size: cover;
-    background-image: var(--bg-image);
-    min-height: 100vh;
-    width: 100%;
-
+    z-index: -1; /* behind content */
 }
 
 body.helldiver-background {
@@ -20,17 +28,7 @@ body.helldiver-background {
 }
 
 @media (max-width: 800px) {
-    body {
-        background-attachment: scroll;
-    }
     body.helldiver-background {
         --bg-image: url('../assets/imgs/background/helldivers-2-editorial-galactic-war-background-mobile-01-en-26jan24.webp');
     }
-}
-
-/* contents */
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 }

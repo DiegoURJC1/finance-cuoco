@@ -8,7 +8,9 @@
 <body class="helldiver-background">
 
 <!-- Botón hamburguesa, visible solo en móvil -->
-<button id="menu-toggle" aria-label="Abrir menú">☰</button>
+<button id="menu-toggle" aria-label="Abrir menú">
+    <span class="icon">☰</span>
+</button>
 
 <!-- Menú generado dinámicamente -->
 <!-- Este div lo generará tu generateTOC.js, pero debe tener la clase page-toc -->
@@ -24,7 +26,10 @@
     >
     <div class="alert-panel"></div>
     <div class="claim">"Con los puños en la masa"</div>
-    <div class="game-info-panel module-spaced"></div>
+    <div class="game-info-panel"></div>
+
+    <div class="social-feed-panel"></div>
+    <div class="comments-module"></div>
 
     <div class="footer-panel"></div>
 </div>
@@ -35,9 +40,11 @@
     <link rel="stylesheet" href="modules/topMenuBar/topMenuBar.css">
     <div class="top-menu-bar-elements">
         <div class="top-menu-bar-element">Metas</div>
+        <div class="top-menu-bar-element">Personajes</div>
         <div class="top-menu-bar-element">
             <a href="index.html" class="top-menu-link">Game</a>
         </div>
+        <div class="top-menu-bar-element">About</div>
         <div class="top-menu-bar-element">
             <a href="pages/faq.html" class="top-menu-link">FAQ</a>
         </div>
@@ -76,6 +83,52 @@
     </div>
 </template>
 
+<template id="social-feed-panel">
+    <link rel="stylesheet" href="modules/socialFeedPanel/socialFeedPanel.css">
+
+    <h2>Social Feed</h2>
+
+    <!-- Twitter embed -->
+    <!--
+    Al parecer no se puede si es desde file
+
+    <div class="twitter-embed">
+        <a class="twitter-timeline"
+           data-theme="light"
+           href="https://x.com/helldivers2">
+            Tweets by TwitterDev
+        </a>
+    </div>
+    -->
+    <!-- Instagram embed -->
+    <div class="instagram-embed">
+        <iframe
+                src="https://www.instagram.com/helldivers2game/embed"
+                width="400"
+                height="480"
+                frameborder="0"
+                scrolling="no"
+                allowtransparency="true">
+        </iframe>
+    </div>
+</template>
+
+<template id="comments-module">
+    <link rel="stylesheet" href="modules/comments/comments.css">
+
+    <div class="comments-container">
+        <h2>Comentarios</h2>
+
+        <form class="comment-form">
+            <input type="text" placeholder="Tu nombre" required>
+            <textarea placeholder="Escribe un comentario..." required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div class="comments-list"></div>
+    </div>
+</template>
+
 <template id="footer-panel">
     <link rel="stylesheet" href="modules/footerPanel/footerPanel.css">
 
@@ -87,6 +140,8 @@
 <script src="js/templateReplacer.js"></script>
 <script src="js/generateTOC.js"></script>
 <script src="js/menuToggle.js"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="js/comments.js"></script>
 <link rel="stylesheet" href="modules/sideNav/sideNav.css">
 </body>
 </html>

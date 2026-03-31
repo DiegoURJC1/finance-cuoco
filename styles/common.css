@@ -1,7 +1,12 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .module-spaced {
     margin: 10px 0;
 }
 
 h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
+    scroll-margin-top: calc(var(--height-top-menu) + 10px);
 }

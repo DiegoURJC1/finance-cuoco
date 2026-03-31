@@ -4,27 +4,56 @@
     top: 70px;
     right: 10px;
     font-size: 2rem;
-    background: rgba(255,255,255,0.9);
+    background: var(--color-background);
+    color: var(--color-text);
     border: 1px solid #ccc;
-    padding: 5px 10px;
     z-index: 10000;
     cursor: pointer;
+    height: 3rem;
+    width: 3rem;
+    transition: transform 0.3s ease;
+}
+
+#menu-toggle .icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+#menu-toggle.open .icon {
+    transform: rotate(180deg);
 }
 
 .page-toc {
     position: fixed;
     top: 70px;
     right: 10px;
-    background: rgba(255,255,255,0.95);
+    background: var(--color-background);
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 20px;
     max-width: 250px;
-    font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
     z-index: 9999;
-
     transition: transform 0.3s ease, opacity 0.3s ease;
+
 }
+
+.side-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.page-toc a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.page-toc a:hover {
+    color: var(--color-text-hover);
+    text-shadow: #868288 0 0 10px;
+}
+
 
 @media (max-width: 1200px) {
     #menu-toggle {
@@ -35,7 +64,7 @@
         transform: translateX(100%); /* fuera de la pantalla */
         opacity: 0;
         pointer-events: none; /* no clicable */
-        top: 140px;
+        top: 130px;
         right: 10px;
     }
 

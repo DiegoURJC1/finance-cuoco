@@ -8,7 +8,7 @@ function generateNavigationMenu() {
         nav.classList.add("page-toc");
 
         const ul = document.createElement("div");
-        nav.appendChild(ul);
+        nav.appendChild(ul).classList.add("side-menu-list");
 
         // Selecciona todos los títulos h1, h2, h3
         const headings = document.querySelectorAll("h1, h2, h3");

@@ -1,0 +1,13 @@
+.social-feed-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.twitter-embed iframe,
+.instagram-embed iframe {
+    width: 100%;
+    max-width: 500px;
+    border: none;
+    border-radius: 8px;
+}
