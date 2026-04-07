@@ -103,7 +103,7 @@ function addComment(name, content, saveToStorage = false) {
     comments.unshift({
         name,
         content,
-        date: formatDate(new Date()) // same format as dummy
+        date: formatDate(new Date())
     });
 
     if (saveToStorage) saveComments(comments);

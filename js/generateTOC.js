@@ -1,20 +1,18 @@
-// js/generateTOC.js
-
 function generateNavigationMenu() {
     // Espera que todo el DOM esté cargado
     document.addEventListener("DOMContentLoaded", () => {
-        // Contenedor del menú
+        // Menu content
         const nav = document.createElement("div");
         nav.classList.add("page-toc");
 
         const ul = document.createElement("div");
         nav.appendChild(ul).classList.add("side-menu-list");
 
-        // Selecciona todos los títulos h1, h2, h3
+        // Select headers
         const headings = document.querySelectorAll("h1, h2, h3");
 
         headings.forEach((heading, index) => {
-            // Si no tiene id, se lo asignamos automáticamente
+            // If no id, assigns automatically
             if (!heading.id) {
                 heading.id = "heading-" + index;
             }
@@ -29,10 +27,9 @@ function generateNavigationMenu() {
             ul.appendChild(li);
         });
 
-        // Inserta el menú al inicio del body (o donde quieras)
+        // Add menu to the top of the page
         document.body.prepend(nav);
     });
 }
 
-// Ejecuta la función
 generateNavigationMenu();

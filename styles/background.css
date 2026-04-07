@@ -24,11 +24,11 @@ body::before {
 }
 
 body.helldiver-background {
-    --bg-image: url('../assets/imgs/background/helldivers-2-editorial-galactic-war-background-desktop-01-en-26jan24.webp');
+    --bg-image: url('../assets/imgs/background/background-desktop.jpg');
 }
 
 @media (max-width: 800px) {
     body.helldiver-background {
-        --bg-image: url('../assets/imgs/background/helldivers-2-editorial-galactic-war-background-mobile-01-en-26jan24.webp');
+        --bg-image: url('../assets/imgs/background/background-mobile.jpg');
     }
 }

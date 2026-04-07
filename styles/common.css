@@ -8,5 +8,21 @@ html {
 
 h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
+
     scroll-margin-top: calc(var(--height-top-menu) + 10px);
+}
+
+h2 {
+    margin-top: 34px;
+}
+
+
+.food-font {
+    font-family: "FoodFont", "Roboto", serif;
+    font-size: 2em;
+}
+
+p {
+    text-align: left;
+    margin: 10px 0;
 }

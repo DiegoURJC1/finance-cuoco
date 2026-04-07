@@ -54,6 +54,22 @@
     text-shadow: #868288 0 0 10px;
 }
 
+.side-menu-list .h1 {
+    margin-left: 0;
+    font-weight: bold;
+}
+
+.side-menu-list .h2 {
+    margin-left: 15px;
+    font-size: 0.95rem;
+}
+
+.side-menu-list .h3 {
+    margin-left: 30px;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
 
 @media (max-width: 1200px) {
     #menu-toggle {

@@ -16,3 +16,11 @@
     font-stretch: 75% 100%; /* condensed o no */
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'FoodFont';
+    src: url("../assets/fonts/FoodFont/Foodfont-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
