@@ -35,10 +35,18 @@
     <div class="game-description"></div><!-- template ref -->
     <div class="game-info-panel"></div><!-- template ref -->
     <div class="font-panel"></div><!-- template ref -->
-    <div class="social-feed-panel"></div><!-- template ref -->
-    <div class="comments-module"></div><!-- template ref -->
+    <div class="music-player-panel"
+         data-songs='[
+        {"file": "mainThemeV4.ogg", "title": "Main Theme", "artist": "InkBow_", "album": "Cuoco Cooked Original Soundtrack", "cover": "assets/imgs/logo/Logo Cuoco Cooked v2 dev.png"},
+        {"file": "02 The Only Thing I Know For Real.flac", "title": "The Only Thing I Know For Real (Maniac Agenda Mix)", "artist": "Logan Mader", "album": "Metal Gear Rising Vocal Tracks Selection", "cover": "https://placehold.co/300x300?text=MGR"},
+        {"file": "1.12 Hellfire.mp3", "title": "Hellfire", "artist": "Naoki Hashimoto", "album": "Guilty Gear -STRIVE- Digital Soundtrack", "cover": "https://placehold.co/300x300?text=Hellfire"},
+        {"file": "03 Symphony.flac", "title": "Symphony", "artist": "Naoki Hashimoto", "album": "Guilty Gear -STRIVE- Original Soundtrack [Season 3]", "cover": "assets/music/covers/Symphony.jpg"}
 
-    <div class="footer-panel"></div>
+     ]'></div><!-- template ref -->
+<div class="social-feed-panel"></div><!-- template ref -->
+<div class="comments-module"></div><!-- template ref -->
+
+<div class="footer-panel"></div>
 </div>
 
 
@@ -115,6 +123,69 @@
     <div class="food-font">ABCDEFGHIJKLMNÑOPQRSTUVWXYZ</div>
 </template>
 
+
+<template id="music-player-panel">
+    <link rel="stylesheet" href="modules/musicPlaterPanel/musicPlayer.css">
+    <div class="player-container">
+        <div class="visual-wrapper">
+            <div class="cd-svg-container">
+                <svg width="200" height="200" viewBox="0 0 200 200">
+                    <circle cx="100" cy="100" r="95" fill="#121212" stroke="#333" stroke-width="1"/>
+                    <path d="M 150 100 A 50 50 0 0 1 100 150" fill="none" stroke="white" stroke-width="2" opacity="0.15"
+                          stroke-linecap="round"/>
+                    <path d="M 50 100 A 50 50 0 0 1 100 50" fill="none" stroke="white" stroke-width="2" opacity="0.15"
+                          stroke-linecap="round"/>
+                    <circle cx="100" cy="100" r="85" fill="none" stroke="#222" stroke-width="0.5"/>
+                    <circle cx="100" cy="100" r="35" fill="#2563eb"/>
+                    <circle cx="100" cy="100" r="8" fill="#121212"/>
+                </svg>
+            </div>
+            <div class="album-cover-wrapper">
+                <img id="player-cover" src="https://placehold.co/300x300/222/ddd?text=CD" alt="Cover">
+            </div>
+        </div>
+
+        <div class="metadata-info">
+            <h2 id="player-title" class="metadata-title-text"></h2>
+            <p id="player-artist" class="artist"></p>
+            <p id="player-album" class="album"></p> <!-- NUEVA LÍNEA -->
+        </div>
+
+        <div class="progress-container">
+            <span id="current-time" class="time-text">00:00</span>
+            <input type="range" id="progress-bar" class="progress-bar" min="0" max="100" value="0">
+            <span id="duration-time" class="time-text">00:00</span>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn" id="prev-btn">
+                <svg width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.52-.302 1.192.105 1.192.702v7.372c0 .597-.672 1.004-1.192.702L5 8.752V12a.5.5 0 0 1-1 0V4z"/>
+                </svg>
+            </button>
+            <button class="play-pause-btn" id="play-btn">
+                <svg id="play-icon" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                </svg>
+            </button>
+            <button class="control-btn" id="next-btn">
+                <svg width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.713 3.31 4 3.717 4 4.314v7.372c0 .597.713 1.004 1.233.702L11.5 8.752V12a.5.5 0 0 0 1 0V4z"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="volume-container">
+            <span id="volume-icon">🔊</span>
+            <input type="range" id="volume-slider" class="volume-slider" min="0" max="1" step="0.01" value="1">
+        </div>
+
+        <div id="playlist" class="playlist-container"></div>
+        <audio id="main-audio"></audio>
+    </div>
+</template>
+
+
 <template id="game-description">
     <div class="claim">"Con los puños en la masa"</div>
     <h1>Descripción</h1>
@@ -179,6 +250,7 @@
 <script src="js/templateReplacer.js"></script>
 <script src="js/generateTOC.js"></script>
 <script src="js/menuToggle.js"></script>
+<script src="js/musicPlayer.js"></script>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script src="js/comments.js"></script>
 <link rel="stylesheet" href="modules/sideNav/sideNav.css">

@@ -3,6 +3,6 @@
 @import "common.css";
 @import "background.css";
 @import "../modules/mainContent/mainContent.css";
-
+@import "../modules/musicPlaterPanel/musicPlayer.css";
 /* pages */
 @import "index.css";
