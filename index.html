@@ -25,28 +25,92 @@
             alt="game logo"
     >
 
+    <p class="center">Carátula de juego</p>
+    <img
+            style="height: 60vh; align-self: center"
+            src="assets/imgs/logo/portadaConLogo.png"
+            alt="Carátula del juego"
+    >
+
     <div class="disclaimer-panel"></div><!-- template ref -->
 
     <div class="studio">
         Studio:
         <div class="studio-name">BETTER NAME PENDING</div>
     </div>
+
     <div class="alert-panel"></div><!-- template ref -->
     <div class="game-description"></div><!-- template ref -->
-    <div class="game-info-panel"></div><!-- template ref -->
+    <div class="video-container reveal">
+        <video id="main-trailer" width="100%">
+            <source src="./assets/videos/trailer.mp4" type="video/mp4">
+        </video>
+        <div class="video-controls">
+            <div class="video-progress">
+                <div class="progress-bar-fill"></div>
+            </div>
+            <div class="video-btns">
+                <button id="v-play">PLAY</button>
+                <div class="video-title-overlay">CUOCO_TRAILER_01.MP4</div>
+                <button id="v-mute">MUTE</button>
+            </div>
+        </div>
+    </div>
+    <h1>Estilo y visuales</h1>
+
+
+    <div class="gallery-wrapper"></div><!-- template ref -->
     <div class="font-panel"></div><!-- template ref -->
     <div class="music-player-panel"
          data-songs='[
-        {"file": "mainThemeV4.ogg", "title": "Main Theme", "artist": "InkBow_", "album": "Cuoco Cooked Original Soundtrack", "cover": "assets/imgs/logo/Logo Cuoco Cooked v2 dev.png"},
-        {"file": "02 The Only Thing I Know For Real.flac", "title": "The Only Thing I Know For Real (Maniac Agenda Mix)", "artist": "Logan Mader", "album": "Metal Gear Rising Vocal Tracks Selection", "cover": "https://placehold.co/300x300?text=MGR"},
+        {"file": "mainThemeV4.ogg", "title": "Time for a smackdown", "artist": "InkBow_", "album": "Cuoco Cooked Original Soundtrack", "cover": "assets/imgs/logo/Logo Cuoco Cooked v2 dev.png"},
+        {"file": "02 The Only Thing I Know For Real (Maniac Agenda Mix).flac", "title": "The Only Thing I Know For Real (Maniac Agenda Mix)", "artist": "Logan Mader", "album": "Metal Gear Rising Vocal Tracks Selection", "cover": "https://placehold.co/300x300?text=MGR"},
         {"file": "1.12 Hellfire.mp3", "title": "Hellfire", "artist": "Naoki Hashimoto", "album": "Guilty Gear -STRIVE- Digital Soundtrack", "cover": "https://placehold.co/300x300?text=Hellfire"},
         {"file": "03 Symphony.flac", "title": "Symphony", "artist": "Naoki Hashimoto", "album": "Guilty Gear -STRIVE- Original Soundtrack [Season 3]", "cover": "assets/music/covers/Symphony.jpg"}
 
      ]'></div><!-- template ref -->
-<div class="social-feed-panel"></div><!-- template ref -->
-<div class="comments-module"></div><!-- template ref -->
 
-<div class="footer-panel"></div>
+    <div class="game-info-panel"></div><!-- template ref -->
+    <div class="how-to-play">
+        <h1>Cómo jugar</h1>
+        <p>
+            Este juego usa el esquema clásico de los juegos dee peleas. Poniendo los motion inputs de palanca en el
+            centro. ¡No te preocupes si no se te da bien! El juego tiene muchos sistemas para ayudar a jugadores novatos
+            como auto-combos.
+        </p>
+        <div>
+            <img
+                    style="width: 80%; align-self: center"
+                    src="./assets/imgs/diagrams/Controller%20Inputs.svg"
+                    alt="Diagrama de controles de juego"
+            />
+            <p class="center">
+                ¡Encaja tus ataques con golpes rápidos y termina con golpes saladásticos!
+            </p>
+            <img
+                    style="width: 40%; align-self: center"
+                    src="./assets/imgs/diagrams/Input%20strength.svg"
+                    alt="Diagrama de controles de juego"
+            />
+        </div>
+
+
+    </div>
+
+
+
+    <div class="goals">
+        <h1>Objetivos</h1>
+        <img
+                style="width:80%"
+                src="/assets/imgs/goals/tenedorObjetivos.png"
+                alt="Tenedor Objetivos"
+        />
+    </div>
+    <div class="social-feed-panel"></div><!-- template ref -->
+    <div class="comments-module"></div><!-- template ref -->
+
+    <div class="footer-panel"></div>
 </div>
 
 
@@ -111,7 +175,7 @@
 </template>
 
 <template id="font-panel">
-    <h1>Fuente de texto</h1>
+    <h2>Fuente de texto</h2>
     <p>
         Esta fuente de texto es una fuente display para ser usada de forma selectiva en títulos de gran formato.
     </p>
@@ -125,18 +189,26 @@
 
 
 <template id="music-player-panel">
-    <link rel="stylesheet" href="modules/musicPlaterPanel/musicPlayer.css">
+    <link rel="stylesheet" href="modules/musicPlayerPanel/musicPlayer.css">
+    <h1>Música de juego</h1>
+    <p>
+        Esta playlist contiene una serie de canciones del estilo del juego para ser usada durante los combates.
+        Cada personaje tendrá su propia canción que expreses quienes son y sus metas personales como las de la playlist.
+    </p>
+    <p>
+        La primera canción es un tema original del juego para ser usado como canción principal.
+    </p>
     <div class="player-container">
         <div class="visual-wrapper">
             <div class="cd-svg-container">
                 <svg width="200" height="200" viewBox="0 0 200 200">
-                    <circle cx="100" cy="100" r="95" fill="#121212" stroke="#333" stroke-width="1"/>
+                    <circle cx="100" cy="100" r="95" fill="#121212" stroke="#888" stroke-width="1"/>
                     <path d="M 150 100 A 50 50 0 0 1 100 150" fill="none" stroke="white" stroke-width="2" opacity="0.15"
                           stroke-linecap="round"/>
                     <path d="M 50 100 A 50 50 0 0 1 100 50" fill="none" stroke="white" stroke-width="2" opacity="0.15"
                           stroke-linecap="round"/>
-                    <circle cx="100" cy="100" r="85" fill="none" stroke="#222" stroke-width="0.5"/>
-                    <circle cx="100" cy="100" r="35" fill="#2563eb"/>
+                    <circle cx="100" cy="100" r="85" fill="none" stroke="#555" stroke-width="0.5"/>
+                    <circle cx="100" cy="100" r="35" fill="#ff4d00"/>
                     <circle cx="100" cy="100" r="8" fill="#121212"/>
                 </svg>
             </div>
@@ -146,7 +218,7 @@
         </div>
 
         <div class="metadata-info">
-            <h2 id="player-title" class="metadata-title-text"></h2>
+            <p id="player-title" class="metadata-title-text"></p>
             <p id="player-artist" class="artist"></p>
             <p id="player-album" class="album"></p> <!-- NUEVA LÍNEA -->
         </div>
@@ -185,12 +257,47 @@
     </div>
 </template>
 
+<template id="gallery-wrapper">
+    <link rel="stylesheet" href="modules/galleyPanel/galleryPanel.css">
+    <h2>Galería de imágenes</h2>
+    <div class="gallery">
+        <a href="assets/imgs/ingame/basurero.png" target="_blank" class="gallery-item">
+            <img src="assets/imgs/ingame/basurero.png" alt="Escenario">
+            <div class="overlay">Escenario</div>
+        </a>
+
+        <a href="assets/imgs/ingame/combatInterfaceInScene.png" target="_blank" class="gallery-item">
+            <img src="assets/imgs/ingame/combatInterfaceInScene.png" alt="Interfaz">
+            <div class="overlay">Interfaz en escena</div>
+        </a>
+
+        <a href="assets/imgs/ingame/peppemoldy_fullArt_temp.png" target="_blank" class="gallery-item">
+            <img src="assets/imgs/ingame/peppemoldy_fullArt_temp.png" alt="Personaje">
+            <div class="overlay">Personaje</div>
+        </a>
+
+        <a href="assets/imgs/ingame/combatInterface.png" target="_blank" class="gallery-item">
+            <img src="assets/imgs/ingame/combatInterface.png" alt="UI">
+            <div class="overlay">Interfaz de combate</div>
+        </a>
+
+        <a href="assets/imgs/ingame/pizarraMenúPausa.png" target="_blank" class="gallery-item">
+            <img src="assets/imgs/ingame/pizarraMenúPausa.png" alt="Menú">
+            <div class="overlay">Menú de pausa</div>
+        </a>
+    </div>
+</template>
 
 <template id="game-description">
     <div class="claim">"Con los puños en la masa"</div>
     <h1>Descripción</h1>
-    Cuoco Coocked es un juego de peleas tradicional en 3D con movimiento en un plano.
-    Descubre el origen de la comida mutante y como los personajes se enfrentan a su nueva realidad.
+    <p>
+        Cuoco Coocked es un juego de peleas tradicional en 3D con movimiento en un plano.
+        Descubre el origen de la comida mutante y como los personajes se enfrentan a su nueva realidad.
+    </p>
+    <p>
+        Juega en los modos de juego clásicos arcade y versus además de vivir una cómica história.
+    </p>
 </template>
 
 <template id="social-feed-panel">
@@ -251,6 +358,8 @@
 <script src="js/generateTOC.js"></script>
 <script src="js/menuToggle.js"></script>
 <script src="js/musicPlayer.js"></script>
+<script src="js/mainEffects.js"></script>
+<script src="modules/galleyPanel/galleryPanel.js">  </script>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script src="js/comments.js"></script>
 <link rel="stylesheet" href="modules/sideNav/sideNav.css">

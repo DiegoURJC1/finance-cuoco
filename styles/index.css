@@ -2,3 +2,33 @@
     font-size: 2em;
     font-weight: bold;
 }
+
+
+.video-container {
+    position: relative;
+    border: 3px solid var(--primary);
+    box-shadow: var(--border-glow);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.video-controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.video-container:hover .video-controls { opacity: 1; }
+
+.video-progress { height: 4px; background: rgba(255,255,255,0.2); cursor: pointer; margin-bottom: 8px; }
+.progress-bar-fill { height: 100%; background: var(--primary); width: 0%; }
+
+.video-btns { display: flex; justify-content: space-between; align-items: center; color: var(--accent); font-family: 'FoodFont', sans-serif; }
+.video-btns button { background: transparent; border: 1px solid var(--accent); color: var(--accent); padding: 5px 15px; cursor: pointer; transition: 0.3s; }
+.video-btns button:hover { background: var(--accent); color: black; }

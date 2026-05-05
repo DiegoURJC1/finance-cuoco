@@ -50,7 +50,7 @@
 }
 
 .page-toc a:hover {
-    color: var(--color-text-hover);
+    color: var(--primary);
     text-shadow: #868288 0 0 10px;
 }
 
@@ -77,9 +77,9 @@
     }
 
     .page-toc {
-        transform: translateX(100%); /* fuera de la pantalla */
+            transform: translateX(100%); /* fuera de la pantalla */
         opacity: 0;
-        pointer-events: none; /* no clicable */
+        pointer-events: none;
         top: 130px;
         right: 10px;
     }

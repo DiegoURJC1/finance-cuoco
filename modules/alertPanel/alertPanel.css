@@ -11,6 +11,7 @@
     align-items: flex-start;
     gap: 10px;
     flex-wrap: nowrap;
+    border-left: 5px solid #d3301b;
 }
 
 .alert-panel svg, .disclaimer-panel svg {
