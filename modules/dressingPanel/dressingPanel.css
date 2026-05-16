@@ -1,0 +1,94 @@
+.dressing-module-container {
+    margin: 50px auto;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.dressing-intro {
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.dressing-icons-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.dressing-card {
+    width: 90px;
+    height: 90px;
+    background-color: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.dressing-icon {
+    width: 65%;
+    height: 65%;
+    object-fit: contain;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+    pointer-events: none;
+}
+
+.dressing-card:hover {
+    border-color: #ff4d00;
+    box-shadow: 0 10px 20px rgba(255, 77, 0, 0.3);
+}
+
+.dressing-card:hover .dressing-icon {
+    transform: scale(1.2);
+}
+
+.dressing-card.active {
+    border-color: #ff4d00;
+    background-color: #252525;
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(255, 77, 0, 0.5);
+    z-index: 2;
+}
+
+.dressing-card.active .dressing-icon {
+    transform: scale(1.2);
+}
+
+.dressing-details {
+    background: rgba(15, 15, 15, 0.85);
+    border-left: 5px solid #ff4d00;
+    border-radius: 6px;
+    padding: 25px;
+    text-align: left;
+    min-height: 140px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.8), 0 4px 15px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+}
+
+#dressing-name {
+    margin-top: 0;
+    color: #ff4d00;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#dressing-description {
+    margin: 10px 0 0 0;
+    font-size: 1.05rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+}

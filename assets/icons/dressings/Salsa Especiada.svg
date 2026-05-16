@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-612,0)">
+        <g id="Salsa-Especiada" serif:id="Salsa Especiada" transform="matrix(0.237037,0,0,0.237037,612,0)">
+            <rect x="0" y="0" width="1080" height="1080" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="0" y="0" width="1080" height="1080"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(3.653545,-2.109375,2.109375,3.653545,-2430.47814,1626.424023)">
+                    <rect x="721.677" y="9" width="31.323" height="20" style="fill:rgb(252,61,58);"/>
+                </g>
+                <g transform="matrix(3.653545,-2.109375,2.109375,3.653545,-2430.47814,1626.424023)">
+                    <path d="M749.677,38L752.223,76.306C752.719,83.768 756.276,90.693 762.053,95.443L763.788,96.869C770.049,102.017 773.677,109.697 773.677,117.803L773.677,230.692C773.677,233.848 772.423,236.875 770.192,239.106C767.96,241.338 764.933,242.592 761.777,242.592L712.9,242.592C709.744,242.592 706.717,241.338 704.485,239.106C702.254,236.875 701,233.848 701,230.692L701,117.803C701,109.697 704.628,102.017 710.889,96.869L712.625,95.443C718.401,90.693 721.958,83.768 722.454,76.306L725,38L749.677,38Z" style="fill:rgb(80,41,31);"/>
+                </g>
+                <g transform="matrix(3.265119,-1.885117,1.968621,3.409752,-2111.140363,1518.117521)">
+                    <rect x="696.677" y="118" width="81.323" height="116" style="fill:rgb(252,61,58);"/>
+                    <clipPath id="_clip2">
+                        <rect x="696.677" y="118" width="81.323" height="116"/>
+                    </clipPath>
+                    <g clip-path="url(#_clip2)">
+                        <g transform="matrix(1.118962,0,0,1.071499,-87.71547,-16.73067)">
+                            <circle cx="737.339" cy="175" r="46" style="fill:rgb(244,253,255);"/>
+                        </g>
+                    </g>
+                </g>
+                <g transform="matrix(4.21875,0,0,4.21875,-3872.8125,0)">
+                    <path d="M1074,16L1074,-0C1129.192,-0 1174,44.808 1174,100L1158,100C1158,53.639 1120.361,16 1074,16ZM1074,32C1111.53,32 1142,62.47 1142,100L1126,100C1126,71.3 1102.7,48 1074,48L1074,32ZM1074,64C1093.869,64 1110,80.131 1110,100L1094,100C1094,88.962 1085.038,80 1074,80L1074,64Z" style="fill:rgb(60,255,205);"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-2142,0)">
+        <g id="Quemado" transform="matrix(0.237037,0,0,0.237037,2142,0)">
+            <rect x="0" y="0" width="1080" height="1080" style="fill:none;"/>
+            <g transform="matrix(4.21875,0,0,4.21875,-9036.5625,0)">
+                <path d="M2256,0C2264,91 2181,88 2181,175C2181,214.38 2213,256 2262,256C2335.094,256 2357,196.019 2357,169C2357,148.875 2355,133 2346,115C2339.002,132.231 2325.61,142.394 2309,149C2334,77 2289.397,34.81 2256,0Z" style="fill:rgb(255,104,1);"/>
+            </g>
+            <g transform="matrix(4.21875,0,0,4.21875,-9036.5625,0)">
+                <path d="M2307,218C2307,171 2266,184 2270,131C2247,149 2233.717,179.109 2243,206C2237,205.211 2230,200.4 2224,190C2220,197 2218,197.311 2218,214C2218,236 2233,256 2262,256C2291,256 2307,237.889 2307,218Z" style="fill:rgb(255,212,1);"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -94,10 +94,8 @@
                     alt="Diagrama de controles de juego"
             />
         </div>
-
-
     </div>
-
+    <div class="dressing-panel"></div><!-- template ref -->
 
     <div class="goals">
         <h1>Objetivos</h1>
@@ -232,7 +230,7 @@
         <div class="metadata-info">
             <p id="player-title" class="metadata-title-text"></p>
             <p id="player-artist" class="artist"></p>
-            <p id="player-album" class="album"></p> <!-- NUEVA LÍNEA -->
+            <p id="player-album" class="album"></p>
         </div>
 
         <div class="progress-container">
@@ -323,6 +321,25 @@
     </p>
 </template>
 
+<template id="dressing-panel">
+    <link rel="stylesheet" href="./modules/dressingPanel/dressingPanel.css">
+    <div class="dressing-module-container">
+        <h2>Sistema de aderezos</h2>
+        <p class="dressing-intro">
+            Los aderezos son un pilar fundamental en los combates de <i>Cuoco Cooked</i>. Aplica salsas o condimentos a
+            los rivales o a ti mismo para cambiar las propiedades de la batalla, desatando efectos
+            potenciadores o estados alterados críticos.
+        </p>
+
+        <div class="dressing-icons-grid"></div>
+
+        <div class="dressing-details">
+            <h2 id="dressing-name"></h2>
+            <p id="dressing-description"></p>
+        </div>
+    </div>
+</template>
+
 <template id="social-feed-panel">
     <link rel="stylesheet" href="modules/socialFeedPanel/socialFeedPanel.css">
 
@@ -332,7 +349,7 @@
         pre lanzamiento, según el equipo vaya desarrollando las mecánicas publicaremos vídeos mostrando la evolución y
         los problemas que surjan, para hacer partícipe a quienes quieran apoyar el proyecto.
     </p>
-    -->
+
     <!-- Instagram embed -->
     <div class="instagram-embed">
         <iframe
@@ -407,8 +424,8 @@
 <script src="js/generateTOC.js"></script>
 <script src="js/menuToggle.js"></script>
 <script src="js/musicPlayer.js"></script>
+<script src="modules/dressingPanel/dressingPanel.js"></script>
 <script src="js/mainEffects.js"></script>
-<script src="modules/galleyPanel/galleryPanel.js"></script>
 <script src="js/comments.js"></script>
 <link rel="stylesheet" href="modules/sideNav/sideNav.css">
 </body>

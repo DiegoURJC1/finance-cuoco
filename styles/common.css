@@ -40,7 +40,6 @@ p {
     padding: 40px;
 }
 
-/* Efecto hover en el Logo */
 .Cuoco.Cooked.logo {
     filter: drop-shadow(0 0 10px rgba(255, 77, 0, 0.5));
     transition: transform var(--transition-slow);
