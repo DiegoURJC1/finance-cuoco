@@ -18,6 +18,10 @@
     box-shadow: var(--shadow-soft);
 }
 
+.main-content h1, .main-content h2, .main-content h3 {
+    align-items: flex-start;
+}
+
 .main-content img{
     display: block;
     margin: auto;
