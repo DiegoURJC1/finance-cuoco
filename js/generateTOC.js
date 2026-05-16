@@ -1,5 +1,9 @@
+/**
+ * Generates an automatic Table Of Contents
+ * based on ``h1``, ``h2``, etc.
+ */
 function generateNavigationMenu() {
-    // Espera que todo el DOM esté cargado
+    // Wait for DOM to lead
     document.addEventListener("DOMContentLoaded", () => {
         // Menu content
         const nav = document.createElement("div");
