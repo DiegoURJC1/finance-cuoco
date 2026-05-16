@@ -1,33 +1,53 @@
 .top-menu-bar {
     width: 100%;
     height: var(--height-top-menu);
-    background-color: var(--color-background);
-    color: black;
+    background-color: rgba(13, 13, 13, 0.85);
+    backdrop-filter: var(--glass);
+    -webkit-backdrop-filter: var(--glass);
+    border-bottom: 1px solid var(--border-rgba);
     position: sticky;
     top: 0;
     left: 0;
     display: flex;
-    justify-content: center; /* centra la barra de elementos */
+    justify-content: center;
     align-items: center;
-
     z-index: 99;
 }
 
 .top-menu-bar-elements {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-
+    font-weight: 700;
+}
+.top-menu-bar-elements a {
     font-size: 1.4rem;
-    text-transform: uppercase;
 }
 
 .top-menu-bar-element {
-    padding: 0.2rem 0.4rem;
-    background-color: #fbfbfb;
-    border-radius: 5px;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    display: inline-block;
+    padding: 6px 16px;
+    background-color: var(--bg-dark-700);
+    border: 1px solid var(--border-rgba);
+    border-radius: var(--border-radius-md);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color var(--transition-fast);
+    cursor: pointer;
+}
+
+.top-menu-bar-element:hover {
+    transform: translateY(-2px);
+    background-color: var(--bg-dark-800);
+    border-color: var(--primary);
+}
+
+.top-menu-link {
+    color: var(--color-text) !important;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+}
+
+.top-menu-bar-element:hover .top-menu-link {
+    color: var(--primary-hover) !important;
 }

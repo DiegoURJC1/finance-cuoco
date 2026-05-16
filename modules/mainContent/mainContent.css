@@ -1,17 +1,41 @@
 .main-content {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 2rem;
-    color: var(--color-text);
-    text-align: center;
+    background: radial-gradient(circle at top, rgba(40, 40, 40, 0.25) 0%, rgba(13, 13, 13, 0.95) 100%);
+    backdrop-filter: var(--glass);
+    -webkit-backdrop-filter: var(--glass);
+    border-left: 1px solid var(--border-rgba);
+    border-right: 1px solid var(--border-rgba);
+    padding: 40px;
     max-width: 64%;
-    width: 900px;
-
+    width: 950px;
     display: flex;
+    flex: 1;
     flex-direction: column;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
-    height: 100%;
-    flex: 1;
-    gap: 20px;
+    min-height: 100vh;
+    gap: 25px;
+    box-shadow: var(--shadow-soft);
 }
 
+.main-content img{
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 1024px) {
+    .main-content {
+        max-width: 90%;
+        padding: 25px;
+    }
+}
+
+.Cuoco.Cooked.logo {
+    filter: drop-shadow(0 0 12px var(--primary-glow));
+    transition: transform var(--transition-slow);
+    align-self: center;
+}
+
+.Cuoco.Cooked.logo:hover {
+    transform: scale(1.05) rotate(-1.5deg);
+}

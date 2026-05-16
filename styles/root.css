@@ -1,30 +1,52 @@
 :root {
-    --color-text: #ececec;
-    --color-text-hover: #c332e4;
-    --color-background: #1c1c1c;
+    /* --- PALETA DE COLORES OFICIAL --- */
+    --bg-dark-900: #0d0d0d;      /* Fondo profundo */
+    --bg-dark-800: #141414;      /* Contenedores principales (tarjetas, playlist) */
+    --bg-dark-700: #1f1f1f;      /* Elementos secundarios interactivos */
 
+    --color-text: #ececec;       /* Texto principal */
+    --color-text-muted: #9ca3af; /* Subtítulos y metadatos */
+
+    /* Colores de Marca (Cuoco Fuego) */
     --primary: #ff4d00;
     --primary-hover: #ff6b2b;
+    --primary-glow: rgba(255, 77, 0, 0.4);
+
+    /* Detalles y Énfasis (Saladástico) */
     --accent: #ffd700;
+    --accent-hover: #ffea6c;
+    --accent-glow: rgba(255, 215, 0, 0.2);
 
+    /* Sistema de Alertas (Original) */
+    --alert-bg: #f4d981;
+    --alert-border: #d3301b;
 
-    /* Efectos */
+    /* --- INTERFAZ COMPARTIDA --- */
     --glass: blur(12px) saturate(160%);
-    --border-glow: 0 0 15px rgba(255, 77, 0, 0.3);
+    --border-rgba: rgba(255, 255, 255, 0.08);
+    --border-radius-lg: 12px;
+    --border-radius-md: 6px;
+
+    /* Sombras y Luces */
+    --border-glow: 0 0 15px var(--primary-glow);
+    --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.5);
+
+    /* Animaciones y Transiciones */
     --transition-slow: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    --transition-fast: 0.2s ease;
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
     --height-top-menu: 60px;
 }
 
 * {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
 @keyframes fadeInSimple {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .reveal {

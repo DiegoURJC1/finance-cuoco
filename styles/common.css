@@ -1,65 +1,72 @@
 html {
-     scroll-behavior: smooth;
- }
+    scroll-behavior: smooth;
+    background-color: var(--bg-dark-900);
+    color: var(--color-text)
+}
 
 .module-spaced {
-    margin: 10px 0;
+    margin: 25px 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 10px;
+    color: var(--color-text);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+    scroll-margin-top: calc(var(--height-top-menu) + 20px);
+}
 
-    scroll-margin-top: calc(var(--height-top-menu) + 10px);
+h1 {
+    font-size: 2.2rem;
+    border-bottom: 1px solid var(--border-rgba);
+    padding-bottom: 8px;
+    margin-top: 40px;
 }
 
 h2 {
-    margin-top: 34px;
+    font-size: 1.6rem;
+    margin-top: 35px;
 }
 
-
 .food-font {
-    font-family: "FoodFont", "Roboto", serif;
+    font-family: "FoodFont", "Roboto", sans-serif;
+    color: var(--accent);
+    letter-spacing: 1px;
+    text-align: center;
     font-size: 2em;
+    overflow-wrap: anywhere;
+    word-break: break-all;
 }
 
 p {
-    text-align: left;
-    margin: 10px 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    opacity: 0.9;
+    margin: 12px 0;
 }
 
 .center {
     text-align: center !important;
 }
 
-
-.main-content {
-    background: radial-gradient(circle at top, rgba(40, 40, 40, 0.4) 0%, rgba(10, 10, 10, 0.9) 100%);
-    backdrop-filter: var(--glass);
-    border-left: 1px solid rgba(255,255,255,0.1);
-    border-right: 1px solid rgba(255,255,255,0.1);
-    padding: 40px;
-}
-
-.Cuoco.Cooked.logo {
-    filter: drop-shadow(0 0 10px rgba(255, 77, 0, 0.5));
-    transition: transform var(--transition-slow);
-}
-.Cuoco.Cooked.logo:hover {
-    transform: scale(1.05) rotate(-2deg);
-}
-
-
-@keyframes pulseGlow {
-    from { box-shadow: inset 0 0 10px rgba(211, 48, 27, 0.1); }
-    to { box-shadow: inset 0 0 20px rgba(211, 48, 27, 0.4); }
-}
-
 a {
     color: var(--primary);
     text-decoration: none;
+    transition: color var(--transition-fast), text-shadow var(--transition-fast);
 }
 
 a:hover {
     color: var(--primary-hover);
-    text-shadow: #868288 0 0 10px;
+    text-shadow: 0 0 8px var(--primary-glow);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+center {
+    text-align: center;
+    align-self: center;
 }

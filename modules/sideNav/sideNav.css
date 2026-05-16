@@ -1,58 +1,49 @@
 #menu-toggle {
-    display: none; /* oculto por defecto */
+    display: none;
     position: fixed;
-    top: 70px;
-    right: 10px;
-    font-size: 2rem;
-    background: var(--color-background);
+    top: calc(var(--height-top-menu) + 15px);
+    right: 20px;
+    background: var(--bg-dark-800);
     color: var(--color-text);
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-rgba);
+    border-radius: var(--border-radius-md);
     z-index: 10000;
     cursor: pointer;
     height: 3rem;
     width: 3rem;
-    transition: transform 0.3s ease;
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
 }
 
-#menu-toggle .icon {
-    display: inline-block;
-    transition: transform 0.3s ease;
-    transform-origin: center;
-}
-
-#menu-toggle.open .icon {
-    transform: rotate(180deg);
+#menu-toggle:hover {
+    border-color: var(--primary);
 }
 
 .page-toc {
     position: fixed;
-    top: 70px;
-    right: 10px;
-    background: var(--color-background);
-    border: 1px solid #ccc;
+    top: calc(var(--height-top-menu) + 20px);
+    right: 20px;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: var(--glass);
+    -webkit-backdrop-filter: var(--glass);
+    border: 1px solid var(--primary);
+    border-radius: var(--border-radius-lg);
     padding: 20px;
-    max-width: 250px;
-    font-size: 0.9rem;
+    width: 260px;
+    box-shadow: var(--shadow-soft);
     z-index: 9999;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-
-}
-
-.side-menu-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
 }
 
 .page-toc a {
-    color: var(--color-text);
-    text-decoration: none;
+    color: var(--color-text-muted);
+    transition: color var(--transition-fast);
 }
 
 .page-toc a:hover {
     color: var(--primary);
-    text-shadow: #868288 0 0 10px;
+
 }
+
 
 .side-menu-list .h1 {
     margin-left: 0;
@@ -73,21 +64,19 @@
 
 @media (max-width: 1200px) {
     #menu-toggle {
-        display: block; /* botón visible */
+        display: block;
     }
 
     .page-toc {
-            transform: translateX(100%); /* fuera de la pantalla */
+        transform: translateX(120%) translateY(20%);
         opacity: 0;
         pointer-events: none;
-        top: 130px;
-        right: 10px;
     }
 
+
     .page-toc.open {
-        transform: translateX(0);
+        transform: translateX(0) translateY(20%);
         opacity: 1;
         pointer-events: auto;
-
     }
 }
