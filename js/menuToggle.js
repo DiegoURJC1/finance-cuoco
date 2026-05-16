@@ -4,9 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!toggleBtn) return;
 
     toggleBtn.addEventListener("click", (e) => {
-        e.stopPropagation(); // Evita interferencias de propagación
+        e.stopPropagation();
 
-        // Buscamos el panel en el momento del click, asegurando que ya exista en el DOM
         const toc = document.querySelector(".page-toc");
         const icon = toggleBtn.querySelector(".icon");
 
@@ -20,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Opcional y muy recomendado: Cerrar el menú automáticamente si se hace click fuera de él
+    // Close when click outside
     document.addEventListener("click", (e) => {
         const toc = document.querySelector(".page-toc");
         if (toc && toc.classList.contains("open") && !toc.contains(e.target)) {

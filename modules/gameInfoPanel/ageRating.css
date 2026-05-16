@@ -7,9 +7,9 @@
 }
 
 .age-classifications > * {
-    max-width: 80px;  /* ancho máximo de cada celda */
-    width: 100%;      /* que ocupe el espacio disponible hasta el máximo */
-    margin: 0 auto;   /* centra la celda si sobra espacio */
+    max-width: 80px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .age-classification {

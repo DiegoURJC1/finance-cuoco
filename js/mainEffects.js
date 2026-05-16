@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Controlador de Video
     const video = document.getElementById('main-trailer');
     const playBtn = document.getElementById('v-play');
     const muteBtn = document.getElementById('v-mute');
@@ -33,27 +32,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // 2. Observer para animaciones al hacer scroll (SÓLIDO Y SELECTIVO)
     const observerOptions = {
-        root: null, // Usa el viewport del navegador
+        root: null,
         rootMargin: '0px',
-        threshold: 0.15 // Un 15% visible para activar la animación con más margen de seguridad
+        threshold: 0.15
     };
 
     const scrollObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Añade la clase que activa la animación
                 entry.target.classList.add('is-revealed');
-
-                // OPTIMIZACIÓN CLAVE: Una vez animado, dejamos de observarlo.
-                // Así ahorramos rendimiento y evitamos que vuelva a interferir con el CSS.
+                // Stop observing after animated
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // En lugar de escuchar TODOS los divs del universo, solo escuchamos a los que tengan la clase .scroll-animate
+    // Only affects 'scroll-animate' class
     const animatableElements = document.querySelectorAll('.scroll-animate');
     animatableElements.forEach(el => scrollObserver.observe(el));
 });
