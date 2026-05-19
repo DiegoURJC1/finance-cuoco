@@ -35,7 +35,6 @@ function renderPlatforms() {
     const basePath = "assets/imgs/platform/"
 
     const platforms = [
-        {img: basePath + "PlayStation_5_logo_and_wordmark.svg", name: "PlayStation 5"},
         {img: basePath + "Nintendo_Switch_2_logo.svg", name: "Nintendo Switch 2"},
         {img: basePath + "Steam_icon_logo.svg", name: "Steam"},
         {img: basePath + "Epic_Games_logo.svg", name: "Epic Games"},
