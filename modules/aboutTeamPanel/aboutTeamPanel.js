@@ -9,6 +9,11 @@ const TASKS = Object.freeze({
         desc: "Diseño, estructura y estilo de la web.",
         link: "../index.html"
     },
+    TABLE_OF_CONTENTS_MODULE: {
+        name: "Módulo Table Of Contents",
+        desc: "Desarrollo de módulo TOC que se genera automáticamente leyendo los contenidos de la página y los muestra en el panel lateral.",
+        link: "../index.html"
+    },
     GAME_LOGO: {
         name: "Logo del Juego",
         desc: "Diseño e ilustración del logo.",
@@ -19,10 +24,45 @@ const TASKS = Object.freeze({
         desc: "Diseño y creación de iconos vectoriales para los aderezos.",
         link: "../index.html#dressing-mechanic"
     },
+    MUSIC_MODULE: {
+        name: "Módulo Reproductor de Música",
+        desc: "Desarrollo del reproductor de música con animación de CD, controles de reproducción y playlist.",
+        link: "../index.html#music"
+    },
+    INFO_MODULE: {
+        name: "Módulo Datos de Juego",
+        desc: "Desarrollo de módulo con elementos auto generados sobre calificación por edades y plataformas.",
+        link: "../index.html#game-info"
+    },
+    HOW_TO_PLAY_DIAGRAMS: {
+        name: "Diagramas \"Cómo Jugar\"",
+        desc: "Ilustración vectorial de los diagramas sobre cómo jugar y controlar el juego.",
+        link: "../index.html#how-to-play"
+    },
+    DRESSING_MODULE: {
+        name: "Módulo Aderezos",
+        desc: "Desarrollo de módulo de aderezos generados mediante datos internos.",
+        link: "../index.html#dressing-mechanic"
+    },
+    COMMENTS_MODULE: {
+        name: "Módulo Comentarios",
+        desc: "Desarrollo de módulo de comentarios de la web.",
+        link: "../index.html#comments"
+    },
+    ABOUT_PAGE: {
+        name: "Página About",
+        desc: "Creación de la página About y el módulo de Equipo de Desarrollo.",
+        link: "./about.html"
+    },
+    FAQ_PAGE: {
+        name: "Página About",
+        desc: "Creación de la página FAQ y el módulo de Preguntas Frecuentes.",
+        link: "./faq.html"
+    },
     SONG: {
         name: "Canción original",
         desc: "Creación del tema principal a usar en menús y canción por defecto de combate. Utiliza elementos de cocina comunes para obtener los sonidos de la mezcla.",
-        link: "../index.html#heading-4"
+        link: "../index.html#music"
     },
     COVER_ART: {
         name: "Carátula del juego",
@@ -79,19 +119,31 @@ function initAboutTeamModule() {
         // Team members database registry
         const teamData = [
             {
-                name: "CAG",
-                role: "Arte / Sonido",
-                contributions: [TASKS.COVER_ART, TASKS.SONG, TASKS.UI_DESIGN, TASKS.CHARACTER_ART, TASKS.BACKGROUND_ART]
-            },
-            {
                 name: "DGL",
                 role: "Diseño Web / Programación / Iconos y Diagramas",
-                contributions: [TASKS.WEB_STYLE, TASKS.DRESSING_ICONS, TASKS.GAME_LOGO]
+                contributions: [
+                    TASKS.WEB_STYLE,
+                    TASKS.TABLE_OF_CONTENTS_MODULE,
+                    TASKS.DRESSING_ICONS,
+                    TASKS.GAME_LOGO,
+                    TASKS.MUSIC_MODULE,
+                    TASKS.INFO_MODULE,
+                    TASKS.HOW_TO_PLAY_DIAGRAMS,
+                    TASKS.DRESSING_MODULE,
+                    TASKS.COMMENTS_MODULE,
+                    TASKS.ABOUT_PAGE,
+                    TASKS.FAQ_PAGE
+                ]
             },
             {
                 name: "JMA",
                 role: "Multimedia / Diseño de Juego",
                 contributions: [TASKS.TRAILER, TASKS.FONT, TASKS.DRESSING_SYSTEM]
+            },
+            {
+                name: "CAG",
+                role: "Arte / Sonido",
+                contributions: [TASKS.COVER_ART, TASKS.SONG, TASKS.UI_DESIGN, TASKS.CHARACTER_ART, TASKS.BACKGROUND_ART]
             },
             {
                 name: "PJL",
