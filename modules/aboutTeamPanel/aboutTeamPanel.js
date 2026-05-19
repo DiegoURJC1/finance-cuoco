@@ -99,6 +99,15 @@ const TASKS = Object.freeze({
         desc: "Diseño y desarrollo lógico del sistema de aderezos.",
         link: "../index.html#dressing-mechanic"
     },
+    WEB_BACKGROUND: {
+        name: "Fondo de la Web",
+        desc: "Diseño e ilustración del fondo de la web.",
+    },
+    GOALS_PANEL: {
+        name: "Panel de Objetivos",
+        desc: "Redacción e ilustración del panel de Objetivos.",
+        link: "../index.html#goals"
+    }
 });
 
 /**
@@ -138,17 +147,30 @@ function initAboutTeamModule() {
             {
                 name: "JMA",
                 role: "Multimedia / Diseño de Juego",
-                contributions: [TASKS.TRAILER, TASKS.FONT, TASKS.DRESSING_SYSTEM]
+                contributions: [
+                    TASKS.TRAILER,
+                    TASKS.FONT,
+                    TASKS.DRESSING_SYSTEM
+                ]
             },
             {
                 name: "CAG",
                 role: "Arte / Sonido",
-                contributions: [TASKS.COVER_ART, TASKS.SONG, TASKS.UI_DESIGN, TASKS.CHARACTER_ART, TASKS.BACKGROUND_ART]
+                contributions: [
+                    TASKS.COVER_ART,
+                    TASKS.SONG,
+                    TASKS.UI_DESIGN,
+                    TASKS.CHARACTER_ART,
+                    TASKS.BACKGROUND_ART
+                ]
             },
             {
                 name: "PJL",
                 role: "-",
-                contributions: []
+                contributions: [
+                    TASKS.WEB_BACKGROUND,
+                    TASKS.GOALS_PANEL
+                ]
             },
             {
                 name: "FGG",
