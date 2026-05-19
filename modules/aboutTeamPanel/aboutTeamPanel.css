@@ -41,22 +41,44 @@
 }
 
 .team-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    padding-bottom: 12px;
+    padding-bottom: 16px;
+}
+
+.team-member-avatar {
+    margin: 0 !important;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--border-radius-md, 8px);
+    border: 2px solid rgba(255, 77, 0, 0.25);
+    background: var(--bg-dark-700, #111827);
+}
+
+.team-member-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .team-member-name {
     font-size: 1.4rem;
     color: var(--color-text);
-    margin-bottom: 4px;
+    margin: 0 0 4px 0;
 }
 
 .team-member-role {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--accent);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
+    line-height: 1.3;
 }
 
 .team-task-list {
