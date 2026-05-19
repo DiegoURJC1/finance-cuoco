@@ -345,182 +345,7 @@
         Rey de la Cadena Alimenticia.
     </p>
 </template>
-<template id="donations">
-    <div class="donations-module">
-        <h1 id="contributions">Contribuciones</h1>
-        <p>
-            Cuoco Cooked pide la colaboración de sus interesados para financiar el proyecto y poder pagar justamente a
-            sus trabajadores.
-        </p>
-        <p>Donaciones iguales o superiores a 20 € convierten al contribuidor en "patrocinador".</p>
-        <p>Los patrocinadores reciben una copia del juego desde el prelanzamiento.</p>
-        <p>El precio del juego tras el lanzamiento será de 20 €.</p>
 
-        <!-- ESTILOS INTERNOS DEL MÓDULO (Puedes moverlos a tu CSS general) -->
-        <style>
-            .kitchen-board-container {
-                position: relative;
-                width: 100%;
-                max-width: 600px; /* Ajusta el tamaño de la tabla como quieras */
-                margin: 40px auto;
-                aspect-ratio: 16 / 9; /* Ajusta esto a la proporción real de tus imágenes */
-            }
-            .board-layer {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-                transition: transform 0.6s ease-in-out; /* Animación suave de giro */
-            }
-
-            .ingredient-img {
-                pointer-events: none;
-            }
-
-            /* Javascript para cuando psa ek ratón */
-            .rotated {
-                transform: rotate(360deg);
-            }
-
-            /* La capa invisible del mapa que detecta los clics/hovers */
-            .interactive-map-overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 10; /*para que se superponga a las imágenes*/
-            }
-        </style>
-
-
-        <div class="kitchen-board-container">
-            <!-- La tabla de madera está por debajo y no se mueve-->
-            <img class="board-layer" src="./assets/imgs/donations/tablaMadera.png" alt="Tabla de cortar">
-
-            <!-- Inserccón de las imágenes (estas son las que rotan)-->
-            <img id="img-tomate" class="board-layer ingredient-img" src="./assets/imgs/donations/tomate.png" alt="Tomate">
-            <img id="img-queso"  class="board-layer ingredient-img" src="./assets/imgs/donations/queso.png" alt="Queso">
-            <img id="img-lima"   class="board-layer ingredient-img" src="./assets/imgs/donations/lima.png" alt="Lima">
-            <img id="img-seta"   class="board-layer ingredient-img" src="./assets/imgs/donations/seta.png" alt="Seta">
-            <img id="img-pepino" class="board-layer ingredient-img" src="./assets/imgs/donations/pepino.png" alt="Pepino">
-
-            <!-- Imagen invisible que sirve de plantilla para el mapa de coordenadas -->
-            <img class="interactive-map-overlay" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" usemap="#board-map" alt="Zonas interactivas">
-
-            <!-- Lo de abajo son los círculos invisibles que iban a marcar cada imagen-->
-            <!-- Tenían que tener un valor x y un valor y para definirlos-->
-            <!-- AL fianl lo he cambiado para que sea interactivo aunque no práctico-->
-            <!-- Los valores  son (X, Y, Radio). max 600px de ancho -->
-            <map name="board-map">
-                <area shape="circle" coords="100,150,50" alt="tomate" data-ingredient="tomate" href="#">
-                <area shape="circle" coords="220,120,50" alt="queso"  data-ingredient="queso"  href="#">
-                <area shape="circle" coords="350,180,50" alt="lima"   data-ingredient="lima"   href="#">
-                <area shape="circle" coords="460,110,50" alt="seta"   data-ingredient="seta"   href="#">
-                <area shape="circle" coords="520,220,50" alt="pepino" data-ingredient="pepino" href="#">
-            </map>
-        </div>
-
-        <!-- LOGICA EN JAVASCRIPT -->
-        <script>
-            document.querySelectorAll('map area').forEach(area => {
-                const ingredientId = `img-${area.getAttribute('data-ingredient')}`;
-                const imgElement = document.getElementById(ingredientId);
-
-                if (imgElement) {
-                    // Cuando el ratón entra al círculo invisible, gira
-                    area.addEventListener('mouseenter', () => {
-                        imgElement.classList.add('rotated');
-                    });
-
-                    // Cuando el ratón sale del círculo invisible, vuelve a su posición
-                    area.addEventListener('mouseleave', () => {
-                        imgElement.classList.remove('rotated');
-                    });
-                }
-            });
-        </script>
-
-        <!--TABLA copiada de la página de team, por simplificar no le cambio el nombre-->
-        <style>
-            .custom-team-table {
-                width: 100%;
-                max-width: 750px; /* Ancho máximo  */
-                margin: 10px auto 30px auto; /* Margen inferior muy pequeño (10px) para pegarse a la imagen */
-                border-collapse: collapse;
-                background-color: #141414; /* Bloques oscuros */
-                border: 2px solid #ff6600; /* Reborde naranja */
-                color: #ffffff;
-                font-family: sans-serif;
-                font-size: 0.95rem;
-            }
-
-            .custom-team-table td {
-                border: 1px solid #333333; /* Líneas internas sutiles */
-                padding: 12px 16px; /* ¡Aquí está el truco! Esto hace que las letras no estén apegotonadas */
-                vertical-align: top;
-            }
-
-            /* Primera fila  */
-            .custom-team-table tr:first-child {
-                background-color: #ff4d00;
-                color: #000000;
-            }
-
-
-            /* Filas alternas HAY UN COLOR AUNQUE NO SE APRECIE EN LA IDE NOCTURNA */
-            .custom-team-table tr:nth-child(even) {
-                background-color: #1f1f1f;
-            }
-        </style>
-
-        <table class="custom-team-table">
-
-            <tbody>
-            <tr>
-                <!-- colspan="3" para que ocupe todo el anchho -->
-                <td colspan="3"><strong>DONACIONES Y BENEFICIOS</strong></td>
-            </tr>
-            <tr>
-                <td><strong>1€</strong></td>
-                <td>Lavaplatos</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><strong>5€</strong></td>
-                <td>Pelacebollas</td>
-                <td>Stickers de agradecimiento</td>
-            </tr>
-
-            <tr>
-                <td><strong>*20€</strong></td>
-                <td>Pinche</td>
-                <td>Póster de Cuoco Cooked</td>
-            </tr>
-            <tr>
-                <td><strong>50€</strong></td>
-                <td>Chef</td>
-                <td>Disco original y peluche de Peppemoldy</td>
-            </tr>
-            <tr>
-                <td><strong>100€</strong></td>
-                <td>Pancracio</td>
-                <td>Pack regalo con recreaciones comestibles de los luchadores</td>
-            </tr>
-
-            </tbody>
-        </table>
-        <p>
-            *A partir de aquí recibirán el juego con acceso anticipado en el prelanzamiento.
-            <br>
-            **Todos los beneficios incluyen los beneficios anteriores
-        </p>
-
-
-    </div>
-</template>
 <template id="dressing-panel">
     <link rel="stylesheet" href="./modules/dressingPanel/dressingPanel.css">
     <div class="dressing-module-container">
@@ -561,26 +386,88 @@
                 allowtransparency="true"
         >
         </iframe>
-        <p><!-- Iconos  ✉📧📬-->
-            ✉ Escríbenos al correo electrónico cuococooked@gmail.com
+        <p>
+            Escríbenos al correo electrónico cuococooked@gmail.com
         </p>
         <p>
             Haz clic en "Más de Cuoco" en la cabecera para acceder a nuestra página web con más información.
-
         </p>
     </div>
 </template>
 
 
+<template id="donations">
+    <link rel="stylesheet" href="modules/donationsPanel/donationsPanel.css">
 
-        <!--   <form class="comment-form">
-            <input type="text" placeholder="Tu nombre" required>
-            <textarea placeholder="Escribe un comentario..." required></textarea>
-            <button type="submit">Enviar</button>
-        </form>   -->
+    <div class="donations-module">
+        <h1 id="contributions">Contribuciones</h1>
+        <p>
+            Cuoco Cooked pide la colaboración de sus interesados para financiar el proyecto y poder pagar justamente a sus trabajadores.
+        </p>
+        <p>Donaciones iguales o superiores a 20 € convierten al contribuidor en "patrocinador".</p>
+        <p>Los patrocinadores reciben una copia del juego desde el prelanzamiento.</p>
+        <p>El precio del juego tras el lanzamiento será de 20 €.</p>
 
-        <!--   <div class="comments-list"></div>   -->
+        <div class="kitchen-board-container">
+            <img class="board-layer" src="./assets/imgs/donations/tablaMadera.png" alt="Tabla de cortar">
 
+            <img id="img-tomate" class="board-layer ingredient-img" src="./assets/imgs/donations/tomate.png" alt="Tomate">
+            <img id="img-queso"  class="board-layer ingredient-img" src="./assets/imgs/donations/queso.png" alt="Queso">
+            <img id="img-lima"   class="board-layer ingredient-img" src="./assets/imgs/donations/lima.png" alt="Lima">
+            <img id="img-seta"   class="board-layer ingredient-img" src="./assets/imgs/donations/seta.png" alt="Seta">
+            <img id="img-pepino" class="board-layer ingredient-img" src="./assets/imgs/donations/pepino.png" alt="Pepino">
+
+            <img class="interactive-map-overlay" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" usemap="#board-map" alt="Zonas interactivas">
+
+            <map name="board-map">
+                <area shape="circle" coords="100,150,50" alt="tomate" data-ingredient="tomate" href="#">
+                <area shape="circle" coords="220,120,50" alt="queso"  data-ingredient="queso"  href="#">
+                <area shape="circle" coords="350,180,50" alt="lima"   data-ingredient="lima"   href="#">
+                <area shape="circle" coords="460,110,50" alt="seta"   data-ingredient="seta"   href="#">
+                <area shape="circle" coords="520,220,50" alt="pepino" data-ingredient="pepino" href="#">
+            </map>
+        </div>
+
+        <table class="custom-team-table">
+            <tbody>
+            <tr>
+                <td colspan="3"><strong>DONACIONES Y BENEFICIOS</strong></td>
+            </tr>
+            <tr>
+                <td><strong>1€</strong></td>
+                <td>Lavaplatos</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><strong>5€</strong></td>
+                <td>Pelacebollas</td>
+                <td>Stickers de agradecimiento</td>
+            </tr>
+            <tr>
+                <td><strong>*20€</strong></td>
+                <td>Pinche</td>
+                <td>Póster de Cuoco Cooked</td>
+            </tr>
+            <tr>
+                <td><strong>50€</strong></td>
+                <td>Chef</td>
+                <td>Disco original y peluche de Peppemoldy</td>
+            </tr>
+            <tr>
+                <td><strong>100€</strong></td>
+                <td>Pancracio</td>
+                <td>Pack regalo con recreaciones comestibles de los luchadores</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p class="table-disclaimer">
+            *A partir de aquí recibirán el juego con acceso anticipado en el prelanzamiento.
+            <br>
+            **Todos los beneficios incluyen los beneficios anteriores
+        </p>
+    </div>
+</template>
 
 <template id="comments-module">
     <link rel="stylesheet" href="modules/comments/comments.css">
@@ -616,6 +503,7 @@
 <script src="js/templateReplacer.js"></script>
 <script src="modules/topMenuBar/topMenuOverlay.js"></script>
 <script src="js/menuToggle.js"></script>
+<script src="modules/donationsPanel/donationsPanel.js"></script>
 <script src="modules/musicPlayerPanel/musicPlayer.js"></script>
 <script src="modules/dressingPanel/dressingPanel.js"></script>
 <script src="js/mainEffects.js"></script>
