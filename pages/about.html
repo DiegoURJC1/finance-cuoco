@@ -5,7 +5,11 @@
     <title>Cuoco Cooked</title>
     <link rel="stylesheet" href="../styles/imports.css">
 </head>
-<body class="helldiver-background">
+<body class="pasta-background">
+<!-- Side Nav Button -->
+<button id="menu-toggle" aria-label="Abrir menú">
+    <span class="icon">☰</span>
+</button>
 
 <div class="top-menu-bar"></div>
 
@@ -14,14 +18,14 @@
     <p>
         Quienes somos
     </p>
-    <div class="footer-panel"></div>
+    <div class="about-team-panel"></div><!-- template ref -->
+    <div class="footer-panel"></div><!-- template ref -->
 </div>
 
 <!-- Modules here -->
 <template id="top-menu-bar">
     <link rel="stylesheet" href="../modules/topMenuBar/topMenuBar.css">
     <div class="top-menu-bar-elements">
-        <div class="top-menu-bar-element">Metas</div>
         <div class="top-menu-bar-element">
             <a href="https://diegourjc1.github.io/Cuoco_Coocked_GDD/"
                class="top-menu-link">Más de Cuoco</a>
@@ -38,6 +42,18 @@
     </div>
 </template>
 
+<template id="about-team-panel">
+    <link rel="stylesheet" href="../modules/aboutTeamPanel/aboutTeamPanel.css">
+    <div class="team-container">
+        <h1>Equipo de Desarrollo</h1>
+        <p class="team-intro">
+            Conoce a los integrantes de <b>Better Name Pending</b> y las contribuciones clave que cada uno ha aportado al ecosistema culinario de <i>Cuoco Cooked</i>.
+        </p>
+        <div class="team-grid">
+        </div>
+    </div>
+</template>
+
 <template id="footer-panel">
     <link rel="stylesheet" href="../modules/footerPanel/footerPanel.css">
 
@@ -47,8 +63,9 @@
 
 <!-- code -->
 <script src="../js/templateReplacer.js"></script>
-<script src="../js/generateTOC.js"></script>
 <script src="../js/menuToggle.js"></script>
+<script src="../modules/aboutTeamPanel/aboutTeamPanel.js"></script>
+<script src="../js/generateTOC.js"></script>
 <link rel="stylesheet" href="../modules/sideNav/sideNav.css">
 
 </body>

@@ -1,0 +1,104 @@
+.team-container {
+    width: 100%;
+    margin: 30px auto;
+}
+
+.team-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: var(--color-text-muted);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.team-card {
+    background: var(--bg-dark-800);
+    border: 1px solid var(--border-rgba);
+    border-radius: var(--border-radius-lg);
+    padding: 25px;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 77, 0, 0.4);
+    box-shadow: var(--border-glow);
+}
+
+/* Cabecera de la tarjeta */
+.team-card-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 12px;
+}
+
+.team-member-name {
+    font-size: 1.4rem;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.team-member-role {
+    font-size: 0.9rem;
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.team-task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.team-task-item {
+    background: var(--bg-dark-700);
+    padding: 12px 15px;
+    border-radius: var(--border-radius-md);
+    border-left: 3px solid var(--primary);
+}
+
+.task-title {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.task-link {
+    color: var(--color-text);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color var(--transition-fast);
+}
+
+.task-link:hover {
+    color: var(--primary-hover);
+}
+
+.task-link-icon {
+    font-size: 0.75rem;
+    opacity: 0.6;
+}
+
+.task-desc {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--color-text-muted);
+    margin: 0;
+    opacity: 0.85;
+}
+
+.text-accent {
+    color: var(--accent);
+}
