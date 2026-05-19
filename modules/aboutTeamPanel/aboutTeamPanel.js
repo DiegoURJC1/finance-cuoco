@@ -132,7 +132,7 @@ function initAboutTeamModule() {
             {
                 name: "DGL",
                 role: "Diseño Web / Programación / Iconos y Diagramas",
-                image: "../../assets/imgs/devTeam/diego.png",
+                image: "./assets/imgs/devTeam/diego.png",
                 contributions: [
                     TASKS.WEB_STYLE,
                     TASKS.TABLE_OF_CONTENTS_MODULE,
@@ -150,7 +150,7 @@ function initAboutTeamModule() {
             {
                 name: "JMA",
                 role: "Multimedia / Diseño de Juego",
-                image: "../../assets/imgs/devTeam/chus.png",
+                image: "./assets/imgs/devTeam/chus.png",
                 contributions: [
                     TASKS.TRAILER,
                     TASKS.FONT,
@@ -160,7 +160,7 @@ function initAboutTeamModule() {
             {
                 name: "CAG",
                 role: "Arte / Sonido",
-                image: "../../assets/imgs/devTeam/carla.png",
+                image: "./assets/imgs/devTeam/carla.png",
                 contributions: [
                     TASKS.COVER_ART,
                     TASKS.SONG,
@@ -172,7 +172,7 @@ function initAboutTeamModule() {
             {
                 name: "PJL",
                 role: "-",
-                image: "../../assets/imgs/devTeam/paula.png",
+                image: "./assets/imgs/devTeam/paula.png",
                 contributions: [
                     TASKS.WEB_BACKGROUND,
                     TASKS.GOALS_PANEL,
@@ -183,13 +183,13 @@ function initAboutTeamModule() {
             {
                 name: "FGG",
                 role: "-",
-                image: "../../assets/imgs/devTeam/fernando.png",
+                image: "./assets/imgs/devTeam/fernando.png",
                 contributions: []
             },
             {
                 name: "HHJ",
                 role: "-",
-                image: "../../assets/imgs/devTeam/hugo.png",
+                image: "./assets/imgs/devTeam/hugo.png",
                 contributions: []
             }
         ];
