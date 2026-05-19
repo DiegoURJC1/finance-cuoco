@@ -77,7 +77,7 @@
 
     <div class="game-info-panel"></div><!-- template ref -->
     <div class="how-to-play">
-        <h1>Cómo jugar</h1>
+        <h1 id="how-to-play">Cómo jugar</h1>
         <p>
             Este juego usa el esquema clásico de los juegos de peleas. Poniendo los motion inputs de palanca en el
             centro. ¡No te preocupes si no se te da bien! El juego tiene muchos sistemas para ayudar a jugadores novatos
@@ -174,7 +174,7 @@
     <link rel="stylesheet" href="modules/gameInfoPanel/gameInfoPanel.css">
     <script src="modules/gameInfoPanel/gameInfoPanel.js"></script>
 
-    <h1>Información básica</h1>
+    <h1 id="game-info">Información básica</h1>
     <div class="age-classification-panel">
         <h2>Clasificación por edades</h2>
         <p>
@@ -205,7 +205,7 @@
 
 <template id="music-player-panel">
     <link rel="stylesheet" href="modules/musicPlayerPanel/musicPlayer.css">
-    <h1>Música de juego</h1>
+    <h1 id="music">Música de juego</h1>
     <p>
         Esta playlist contiene una serie de canciones del estilo del juego para ser usada durante los combates.
         Cada personaje tendrá su propia canción que expreses quienes son y sus metas personales como las de la playlist.
@@ -433,8 +433,9 @@
 
 <!-- code -->
 <script src="js/templateReplacer.js"></script>
+
 <script src="js/menuToggle.js"></script>
-<script src="js/musicPlayer.js"></script>
+<script src="modules/musicPlayerPanel/musicPlayer.js"></script>
 <script src="modules/dressingPanel/dressingPanel.js"></script>
 <script src="js/mainEffects.js"></script>
 <script src="js/comments.js"></script>
