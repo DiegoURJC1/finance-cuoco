@@ -12,17 +12,42 @@
 <div class="main-content">
     <h1>FAQ</h1>
     <p>
-        Esta es la página de preguntas frecuentes.
+        Esta es la página de preguntas frecuentes. Contáctanos en caso de no haber resuelto tu duda.
     </p>
+    <div class="faq-panel" data-faq='[
+    {
+        "q": "¿Qué es exactamente Cuoco Cooked?",
+        "a": "Es un juego de peleas tradicional en 3D con movimiento en un plano bidimensional. La trama gira en torno a un caótico mundo donde los alimentos han mutado y destruyen el planeta. Tu misión será elegir un bando y luchar para coronarte como el Rey de la Cadena Alimenticia."
+    },
+    {
+        "q": "¿En qué plataformas estará disponible el juego?",
+        "a": "El lanzamiento inicial está planeado para PC a través de Steam, GOG y Epic Games Store además de PS5. Además, si logramos alcanzar los umbrales más altos de nuestra campaña de financiación, desarrollaremos ports para consolas, priorizando plataformas como Nintendo Switch."
+    },
+    {
+        "q": "¿Cómo funciona el \"Sistema de Aderezos\"?",
+        "a": "Los aderezos son un pilar estratégico central en los combates. Podrás aplicar diferentes salsas y condimentos tanto a los rivales como a ti mismo durante la batalla. Esto altera las propiedades del combate en tiempo real, desatando estados alterados críticos o potenciadores salvajes."
+    },
+    {
+        "q": "No juego mucho a juegos de peleas, ¿será demasiado difícil para mí?",
+        "a": "¡Para nada! Aunque respeta el esquema clásico de motion inputs tradicionales con palanca en el centro, el juego está diseñado para ser muy accesible. Cuenta con mecánicas de asistencia como auto-combos y otros sistemas pensados exclusivamente para ayudar a los jugadores novatos."
+    },
+    {
+        "q": "¿Qué modos de juego incluirá la versión final?",
+        "a": "Contará con los clásicos de los Fighting Games: un Modo Versus para reventarte a golpes con tus amigos, un Modo Arcade tradicional para poner a prueba tus habilidades, y un Modo Historia lleno de humor para descubrir el origen de la comida mutante."
+    },
+    {
+        "q": "¿Quiénes están detrás del desarrollo de este sabroso caos?",
+        "a": "Somos Better Name Pending, un equipo independiente e independiente formado por seis desarrolladores dedicados por completo a la programación y al arte del juego, con el objetivo de traer una propuesta fresca y original al género."
+    }
+    ]'></div><!-- template ref -->
 
-    <div class="footer-panel"></div>
+    <div class="footer-panel"></div><!-- template ref -->
 </div>
 
 <!-- Modules here -->
 <template id="top-menu-bar">
     <link rel="stylesheet" href="../modules/topMenuBar/topMenuBar.css">
     <div class="top-menu-bar-elements">
-        <div class="top-menu-bar-element">Metas</div>
         <div class="top-menu-bar-element">
             <a href="https://diegourjc1.github.io/Cuoco_Coocked_GDD/"
                class="top-menu-link">Más de Cuoco</a>
@@ -39,6 +64,12 @@
     </div>
 </template>
 
+<template id="faq-panel">
+    <link rel="stylesheet" href="../modules/faqPanel/faqPanel.css">
+    <div class="faq-container">
+    </div>
+</template>
+
 <template id="footer-panel">
     <link rel="stylesheet" href="../modules/footerPanel/footerPanel.css">
 
@@ -48,6 +79,7 @@
 
 <!-- code -->
 <script src="../js/templateReplacer.js"></script>
+<script src="../modules/faqPanel/faqPanel.js"></script>
 <script src="../js/generateTOC.js"></script>
 <script src="../js/menuToggle.js"></script>
 <link rel="stylesheet" href="../modules/sideNav/sideNav.css">
