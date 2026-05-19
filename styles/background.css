@@ -23,12 +23,12 @@ body::before {
     z-index: -1; /* behind content */
 }
 
-body.helldiver-background {
+body.pasta-background {
     --bg-image: url('../assets/imgs/background/background-desktop.jpg');
 }
 
 @media (max-width: 800px) {
-    body.helldiver-background {
+    body.pasta-background {
         --bg-image: url('../assets/imgs/background/background-mobile.jpg');
     }
 }

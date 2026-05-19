@@ -6,9 +6,9 @@
     <link rel="icon" type="image/png" href="./assets/imgs/logo/Logo%20Cuoco%20Cooked%20v2%20dev.png">
     <link rel="stylesheet" href="styles/imports.css">
 </head>
-<body class="helldiver-background">
+<body class="pasta-background">
 
-<!-- Botón hamburguesa, visible solo en móvil -->
+<!-- Side Nav Button -->
 <button id="menu-toggle" aria-label="Abrir menú">
     <span class="icon">☰</span>
 </button>
@@ -21,6 +21,7 @@
 
 <div class="main-content">
     <img
+            id="game-logo"
             class="Cuoco Cooked logo"
             src="assets/imgs/logo/Logo Cuoco Cooked v2 dev.png"
             alt="game logo"
@@ -28,6 +29,7 @@
 
     <p class="center">Carátula de juego</p>
     <img
+            id="game-cover-art"
             style="height: 60vh; align-self: center"
             src="assets/imgs/logo/portadaConLogo.png"
             alt="Carátula del juego"
@@ -75,7 +77,7 @@
 
     <div class="game-info-panel"></div><!-- template ref -->
     <div class="how-to-play">
-        <h1>Cómo jugar</h1>
+        <h1 id="how-to-play">Cómo jugar</h1>
         <p>
             Este juego usa el esquema clásico de los juegos de peleas. Poniendo los motion inputs de palanca en el
             centro. ¡No te preocupes si no se te da bien! El juego tiene muchos sistemas para ayudar a jugadores novatos
@@ -100,7 +102,7 @@
     <div class="dressing-panel"></div><!-- template ref -->
 
     <div class="goals">
-        <h1>Objetivos</h1>
+        <h1 id="goals">Objetivos</h1>
         <p>
             Hemos planteado una serie de objetivos a alcanzar para poder desarrollar el juego, comenzando por un
             prelanzamiento en Steam para los contribuidores de grado "patrocinador". El lanzamiento a GoG, Steam y Epic
@@ -127,9 +129,9 @@
 <template id="top-menu-bar">
     <link rel="stylesheet" href="modules/topMenuBar/topMenuBar.css">
     <div class="top-menu-bar-elements">
-        <!-- <div class="top-menu-bar-element">Metas</div> -->
         <div class="top-menu-bar-element">
             <a href="https://diegourjc1.github.io/Cuoco_Coocked_GDD/"
+               id="gdd-nav-link"
                class="top-menu-link">Más de Cuoco</a>
         </div>
         <div class="top-menu-bar-element">
@@ -142,6 +144,21 @@
             <a href="pages/faq.html" class="top-menu-link">FAQ</a>
         </div>
     </div>
+
+    <dialog id="gdd-warning-dialog" class="native-overlay-dialog">
+        <p id="title">Documento Especializado</p>
+        <p>
+            Estás a punto de salir del sitio web principal para acceder al documento de diseño del juego (GDD).
+            Aquí podrás ver en detalle el videojuego y su visión.
+        </p>
+        <p>
+            ¿Deseas continuar?
+        </p>
+        <div class="native-overlay-buttons">
+            <button id="dialog-cancel-btn" class="native-overlay-btn cancel">Volver</button>
+            <button id="dialog-confirm-btn" class="native-overlay-btn confirm">Continuar ↗</button>
+        </div>
+    </dialog>
 </template>
 
 <template id="disclaimer-panel">
@@ -175,10 +192,12 @@
     <link rel="stylesheet" href="modules/gameInfoPanel/gameInfoPanel.css">
     <script src="modules/gameInfoPanel/gameInfoPanel.js"></script>
 
-    <h1>Información básica</h1>
-
+    <h1 id="game-info">Información básica</h1>
     <div class="age-classification-panel">
         <h2>Clasificación por edades</h2>
+        <p>
+            Clasificación por edades estimada en distintas regiones y sistemas regulatorios.
+        </p>
         <div class="age-classifications"></div>
     </div>
 
@@ -189,7 +208,7 @@
 </template>
 
 <template id="font-panel">
-    <h2>Fuente de texto</h2>
+    <h2 id="custom-font">Fuente de texto</h2>
     <p>
         Esta fuente de texto es una fuente display para ser usada de forma selectiva en títulos de gran formato.
     </p>
@@ -204,7 +223,7 @@
 
 <template id="music-player-panel">
     <link rel="stylesheet" href="modules/musicPlayerPanel/musicPlayer.css">
-    <h1>Música de juego</h1>
+    <h1 id="music">Música de juego</h1>
     <p>
         Esta playlist contiene una serie de canciones del estilo del juego para ser usada durante los combates.
         Cada personaje tendrá su propia canción que expreses quienes son y sus metas personales como las de la playlist.
@@ -239,7 +258,8 @@
 
         <div class="progress-container">
             <span id="current-time" class="time-text">00:00</span>
-            <input type="range" id="progress-bar" class="progress-bar" min="0" max="100" value="0">
+            <label for="progress-bar"></label><input type="range" id="progress-bar" class="progress-bar" min="0"
+                                                     max="100" value="0">
             <span id="duration-time" class="time-text">00:00</span>
         </div>
 
@@ -263,7 +283,8 @@
 
         <div class="volume-container">
             <span id="volume-icon">🔊</span>
-            <input type="range" id="volume-slider" class="volume-slider" min="0" max="1" step="0.01" value="1">
+            <label for="volume-slider"></label><input type="range" id="volume-slider" class="volume-slider" min="0"
+                                                      max="1" step="0.01" value="1">
         </div>
 
         <div id="playlist" class="playlist-container"></div>
@@ -273,7 +294,7 @@
 
 <template id="gallery-wrapper">
     <link rel="stylesheet" href="modules/galleyPanel/galleryPanel.css">
-    <h2>Galería de imágenes</h2>
+    <h2 id="image-gallery">Galería de imágenes</h2>
     <div class="gallery">
         <a href="assets/imgs/ingame/basurero.png" target="_blank" class="gallery-item">
             <img src="assets/imgs/ingame/basurero.png" alt="Escenario">
@@ -503,7 +524,7 @@
 <template id="dressing-panel">
     <link rel="stylesheet" href="./modules/dressingPanel/dressingPanel.css">
     <div class="dressing-module-container">
-        <h2>Sistema de aderezos</h2>
+        <h2 id="dressing-mechanic">Sistema de aderezos</h2>
         <p class="dressing-intro">
             Los aderezos son un pilar fundamental en los combates de <i>Cuoco Cooked</i>. Aplica salsas o condimentos a
             los rivales o a ti mismo para cambiar las propiedades de la batalla, desatando efectos
@@ -565,14 +586,18 @@
     <link rel="stylesheet" href="modules/comments/comments.css">
 
     <div class="comments-container">
-        <h1>Comentarios</h1>
+        <h1 id="comments">Comentarios</h1>
         <p>
             ¡Queremos saber tu opinión! Déjanos saber tus inquietudes dejando un comentario.
         </p>
 
         <form class="comment-form">
-            <input type="text" placeholder="Tu nombre" required>
-            <textarea placeholder="Escribe un comentario..." required></textarea>
+            <label>
+                <input type="text" placeholder="Tu nombre" required>
+            </label>
+            <label>
+                <textarea placeholder="Escribe un comentario..." required></textarea>
+            </label>
             <button type="submit">Enviar</button>
         </form>
 
@@ -589,8 +614,9 @@
 
 <!-- code -->
 <script src="js/templateReplacer.js"></script>
+<script src="modules/topMenuBar/topMenuOverlay.js"></script>
 <script src="js/menuToggle.js"></script>
-<script src="js/musicPlayer.js"></script>
+<script src="modules/musicPlayerPanel/musicPlayer.js"></script>
 <script src="modules/dressingPanel/dressingPanel.js"></script>
 <script src="js/mainEffects.js"></script>
 <script src="js/comments.js"></script>

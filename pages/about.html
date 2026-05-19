@@ -5,120 +5,70 @@
     <title>Cuoco Cooked</title>
     <link rel="stylesheet" href="../styles/imports.css">
 </head>
-<body class="helldiver-background">
+<body class="pasta-background">
+<!-- Side Nav Button -->
+<button id="menu-toggle" aria-label="Abrir menú">
+    <span class="icon">☰</span>
+</button>
 
 <div class="top-menu-bar"></div>
 
 <div class="main-content">
     <h1>About</h1>
-    <p>Quiénes somos</p>
+    <p>
+        Quienes somos
+    </p>
+    <div class="about-team-panel"></div><!-- template ref -->
+    <div class="footer-panel"></div><!-- template ref -->
+</div>
 
-    <!--estilos de la tabla -->
-    <style>
-        .custom-team-table {
-            width: 100%;
-            max-width: 750px; /* Ancho máximo  */
-            margin: 10px auto 30px auto; /* Margen inferior muy pequeño (10px) para pegarse a la imagen */
-            border-collapse: collapse;
-            background-color: #141414; /* Bloques oscuros */
-            border: 2px solid #ff6600; /* Reborde naranja */
-            color: #ffffff;
-            font-family: sans-serif;
-            font-size: 0.95rem;
-        }
-
-        .custom-team-table td {
-            border: 1px solid #333333; /* Líneas internas sutiles */
-            padding: 12px 16px; /* ¡Aquí está el truco! Esto hace que las letras no estén apegotonadas */
-            vertical-align: top;
-        }
-
-        /* Primera fila  */
-        .custom-team-table tr:first-child {
-            background-color: #ff4d00;
-            color: #000000;
-        }
-
-        /* Filas alternas HAY UN COLOR AUNQUE NO SE APRECIE EN LA IDE NOCTURNA */
-        .custom-team-table tr:nth-child(even) {
-            background-color: #1f1f1f;
-        }
-    </style>
-
-    <table class="custom-team-table">
-        <div style="display: flex; justify-content: center; width: 100%; margin: 10px 0 10px 0;">
-            <img
-                    style="width: 100%; max-height: 85vh; height: auto; object-fit: contain;"
-                    src="../assets/imgs/devTeam/elEquipoAColor.png"
-                    alt="El Equipo a Color"
-            >
-        </div>
-        <tbody>
-        <tr>
-            <!-- colspan="3" para que ocupe todo el anchho -->
-            <td colspan="3"><strong>Miembros y Perfiles de Desarrollador</strong></td>
-        </tr>
-        <tr>
-            <td><strong>Diego</strong></td>
-            <td>Programador</td>
-            <td>Página web y diseño, diseño de personajes, logo</td>
-        </tr>
-        <tr>
-            <td><strong>Chus</strong></td>
-            <td>Programador</td>
-            <td>Vídeo promocional, fuente original, diseño de mecánicas</td>
-        </tr>
-        <tr>
-            <td><strong>Carla</strong></td>
-            <td>Artista</td>
-            <td>Música original, carátula, personajes, interfaces</td>
-        </tr>
-        <tr>
-            <td><strong>Fernando</strong></td>
-            <td>Guionista y programador</td>
-            <td>Guion, financiación, personajes</td>
-        </tr>
-        <tr>
-            <td><strong>Paula</strong></td>
-            <td>Artista</td>
-            <td>Interfaces, diseño web, financiación</td>
-        </tr>
-        <tr>
-            <td><strong>Hugo</strong></td>
-            <td>Marketing</td>
-            <td> </td>
-        </tr>
-        </tbody>
-    </table>
-
-
-
-
-        <div class="footer-panel"></div>
-    </div>
-    <!-- Modules here -->
+<!-- Modules here -->
 <template id="top-menu-bar">
     <link rel="stylesheet" href="../modules/topMenuBar/topMenuBar.css">
     <div class="top-menu-bar-elements">
-        <!--<div class="top-menu-bar-element">Metas</div>-->
         <div class="top-menu-bar-element">
             <a href="https://diegourjc1.github.io/Cuoco_Coocked_GDD/"
+               id="gdd-nav-link"
                class="top-menu-link">Más de Cuoco</a>
         </div>
         <div class="top-menu-bar-element">
             <a href="../index.html" class="top-menu-link">Game</a>
         </div>
         <div class="top-menu-bar-element">
-            <a href="./about.html" class="top-menu-link">About</a>
+            <a href="../pages/about.html" class="top-menu-link">About</a>
         </div>
         <div class="top-menu-bar-element">
-            <a href="./faq.html" class="top-menu-link">FAQ</a>
+            <a href="../pages/faq.html" class="top-menu-link">FAQ</a>
+        </div>
+    </div>
+
+    <dialog id="gdd-warning-dialog" class="native-overlay-dialog">
+        <p id="title">Documento Especializado</p>
+        <p>
+            Estás a punto de salir del sitio web principal para acceder al documento de diseño del juego (GDD).
+            Aquí podrás ver en detalle el videojuego y su visión.
+        </p>
+        <p>
+            ¿Deseas continuar?
+        </p>
+        <div class="native-overlay-buttons">
+            <button id="dialog-cancel-btn" class="native-overlay-btn cancel">Volver</button>
+            <button id="dialog-confirm-btn" class="native-overlay-btn confirm">Continuar ↗</button>
+        </div>
+    </dialog>
+</template>
+
+<template id="about-team-panel">
+    <link rel="stylesheet" href="../modules/aboutTeamPanel/aboutTeamPanel.css">
+    <div class="team-container">
+        <h1>Equipo de Desarrollo</h1>
+        <p class="team-intro">
+            Conoce a los integrantes de <b>Better Name Pending</b> y las contribuciones clave que cada uno ha aportado al ecosistema culinario de <i>Cuoco Cooked</i>.
+        </p>
+        <div class="team-grid">
         </div>
     </div>
 </template>
-
-
-
 
 <template id="footer-panel">
     <link rel="stylesheet" href="../modules/footerPanel/footerPanel.css">
@@ -129,8 +79,10 @@
 
 <!-- code -->
 <script src="../js/templateReplacer.js"></script>
-<script src="../js/generateTOC.js"></script>
+<script src="../modules/topMenuBar/topMenuOverlay.js"></script>
 <script src="../js/menuToggle.js"></script>
+<script src="../modules/aboutTeamPanel/aboutTeamPanel.js"></script>
+<script src="../js/generateTOC.js"></script>
 <link rel="stylesheet" href="../modules/sideNav/sideNav.css">
 
 </body>
