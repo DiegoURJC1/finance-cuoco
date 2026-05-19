@@ -11,17 +11,96 @@
 
 <div class="main-content">
     <h1>About</h1>
-    <p>
-        Quienes somos
-    </p>
-    <div class="footer-panel"></div>
-</div>
+    <p>Quiénes somos</p>
 
-<!-- Modules here -->
+    <!--estilos de la tabla -->
+    <style>
+        .custom-team-table {
+            width: 100%;
+            max-width: 750px; /* Ancho máximo  */
+            margin: 10px auto 30px auto; /* Margen inferior muy pequeño (10px) para pegarse a la imagen */
+            border-collapse: collapse;
+            background-color: #141414; /* Bloques oscuros */
+            border: 2px solid #ff6600; /* Reborde naranja */
+            color: #ffffff;
+            font-family: sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .custom-team-table td {
+            border: 1px solid #333333; /* Líneas internas sutiles */
+            padding: 12px 16px; /* ¡Aquí está el truco! Esto hace que las letras no estén apegotonadas */
+            vertical-align: top;
+        }
+
+        /* Primera fila  */
+        .custom-team-table tr:first-child {
+            background-color: #ff4d00;
+            color: #000000;
+        }
+
+        /* Filas alternas HAY UN COLOR AUNQUE NO SE APRECIE EN LA IDE NOCTURNA */
+        .custom-team-table tr:nth-child(even) {
+            background-color: #1f1f1f;
+        }
+    </style>
+
+    <table class="custom-team-table">
+        <div style="display: flex; justify-content: center; width: 100%; margin: 10px 0 10px 0;">
+            <img
+                    style="width: 100%; max-height: 85vh; height: auto; object-fit: contain;"
+                    src="../assets/imgs/devTeam/elEquipoAColor.png"
+                    alt="El Equipo a Color"
+            >
+        </div>
+        <tbody>
+        <tr>
+            <!-- colspan="3" para que ocupe todo el anchho -->
+            <td colspan="3"><strong>Miembros y Perfiles de Desarrollador</strong></td>
+        </tr>
+        <tr>
+            <td><strong>Diego</strong></td>
+            <td>Programador</td>
+            <td>Página web y diseño, diseño de personajes, logo</td>
+        </tr>
+        <tr>
+            <td><strong>Chus</strong></td>
+            <td>Programador</td>
+            <td>Vídeo promocional, fuente original, diseño de mecánicas</td>
+        </tr>
+        <tr>
+            <td><strong>Carla</strong></td>
+            <td>Artista</td>
+            <td>Música original, carátula, personajes, interfaces</td>
+        </tr>
+        <tr>
+            <td><strong>Fernando</strong></td>
+            <td>Guionista y programador</td>
+            <td>Guion, financiación, personajes</td>
+        </tr>
+        <tr>
+            <td><strong>Paula</strong></td>
+            <td>Artista</td>
+            <td>Interfaces, diseño web, financiación</td>
+        </tr>
+        <tr>
+            <td><strong>Hugo</strong></td>
+            <td>Marketing</td>
+            <td> </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+
+        <div class="footer-panel"></div>
+    </div>
+    <!-- Modules here -->
 <template id="top-menu-bar">
     <link rel="stylesheet" href="../modules/topMenuBar/topMenuBar.css">
     <div class="top-menu-bar-elements">
-        <div class="top-menu-bar-element">Metas</div>
+        <!--<div class="top-menu-bar-element">Metas</div>-->
         <div class="top-menu-bar-element">
             <a href="https://diegourjc1.github.io/Cuoco_Coocked_GDD/"
                class="top-menu-link">Más de Cuoco</a>
@@ -37,6 +116,9 @@
         </div>
     </div>
 </template>
+
+
+
 
 <template id="footer-panel">
     <link rel="stylesheet" href="../modules/footerPanel/footerPanel.css">
