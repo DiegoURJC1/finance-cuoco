@@ -2,6 +2,7 @@ function initDressingPanel() {
     const gridContainer = document.querySelector('.dressing-icons-grid');
     const nameTarget = document.getElementById('dressing-name');
     const descTarget = document.getElementById('dressing-description');
+    const detailsPanel = document.querySelector('.dressing-details');
 
     // End if DOM not loaded
     if (!gridContainer || !nameTarget || !descTarget) return;
@@ -49,15 +50,73 @@ function initDressingPanel() {
         }
     ];
 
+    function setMaxPanelHeight() {
+
+        let maxHeight = 0;
+
+        const temp = document.createElement('div');
+
+        temp.style.position = 'absolute';
+        temp.style.visibility = 'hidden';
+        temp.style.pointerEvents = 'none';
+        temp.style.width = `${detailsPanel.clientWidth - 50}px`;
+
+        temp.className = 'dressing-details-content';
+
+        document.body.appendChild(temp);
+
+        dressings.forEach(dressing => {
+
+            temp.innerHTML = `
+            <h2>${dressing.name}</h2>
+            <p>${dressing.description}</p>
+        `;
+
+            maxHeight = Math.max(maxHeight, temp.offsetHeight);
+        });
+
+        document.body.removeChild(temp);
+
+        detailsPanel.style.minHeight = `${maxHeight + 20}px`;
+    }
+
     function selectDressing(index, element) {
-        document.querySelectorAll('.dressing-card').forEach(card => card.classList.remove('active'));
+
+        document.querySelectorAll('.dressing-card')
+            .forEach(card => card.classList.remove('active'));
+
         element.classList.add('active');
 
-        nameTarget.textContent = dressings[index].name;
-        descTarget.innerHTML = dressings[index].description;
+        const content = document.getElementById('dressing-content');
+
+        if (content.classList.contains('animating')) return;
+
+        content.classList.add('animating');
+
+        content.classList.remove('fade-in');
+        content.classList.add('fade-out');
+
+        setTimeout(() => {
+
+            nameTarget.textContent = dressings[index].name;
+            descTarget.innerHTML = dressings[index].description;
+
+            content.classList.remove('fade-out');
+
+            void content.offsetWidth;
+
+            content.classList.add('fade-in');
+
+            setTimeout(() => {
+                content.classList.remove('animating');
+            }, 300);
+
+        }, 250);
     }
 
     gridContainer.innerHTML = '';
+    setMaxPanelHeight();
+
     dressings.forEach((dressing, idx) => {
         const card = document.createElement('div');
         card.className = `dressing-card ${idx === 0 ? 'active' : ''}`;

@@ -74,8 +74,12 @@
     padding: 25px;
     text-align: left;
     min-height: 140px;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.8), 0 4px 15px rgba(0,0,0,0.5);
+    box-shadow:
+            inset 0 0 10px rgba(0,0,0,0.8),
+            0 4px 15px rgba(0,0,0,0.5);
     box-sizing: border-box;
+
+    overflow: hidden;
 }
 
 #dressing-name {
@@ -91,4 +95,31 @@
     font-size: 1.05rem;
     color: #e0e0e0;
     line-height: 1.6;
+}
+
+.dressing-details-content {
+    transition:
+            opacity 0.25s ease,
+            transform 0.25s ease;
+}
+
+.dressing-details-content.fade-out {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.dressing-details-content.fade-in {
+    animation: dressingFadeIn 0.3s ease;
+}
+
+@keyframes dressingFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
