@@ -100,7 +100,7 @@
         </div>
     </div>
     <div class="dressing-panel"></div><!-- template ref -->
-    <div  class="characters"></div>
+    <div class="characters"></div><!-- template ref -->
 
     <div class="goals">
         <h1 id="goals">Objetivos</h1>
@@ -119,8 +119,6 @@
 
     </div>
     <div class="donations"></div>
-    <div class="social-feed-panel"></div><!-- template ref -->
-    <div class="comments-module"></div><!-- template ref -->
 
     <div class="footer-panel"></div>
 </div>
@@ -368,34 +366,6 @@
     </div>
 </template>
 
-<template id="social-feed-panel">
-    <link rel="stylesheet" href="modules/socialFeedPanel/socialFeedPanel.css">
-
-    <h1 id="social-media">Social Feed</h1>
-    <p>
-        Contacta con nosotros y sigue nuestro progreso en las redes sociales. Si se alcanza el objetivo mínimo para el
-        pre lanzamiento, según el equipo vaya desarrollando las mecánicas publicaremos vídeos mostrando la evolución y
-        los problemas que surjan, para hacer partícipe a quienes quieran apoyar el proyecto.
-    </p>
-
-    <!-- Instagram embed -->
-    <div class="instagram-embed">
-        <iframe
-                src="https://www.instagram.com/officialcuococooked/embed"
-                width="400"
-                height="480"
-                allowtransparency="true"
-        >
-        </iframe>
-        <p>
-            Escríbenos al correo electrónico cuococooked@gmail.com
-        </p>
-        <p>
-            Haz clic en "Más de Cuoco" en la cabecera para acceder a nuestra página web con más información.
-        </p>
-    </div>
-</template>
-
 
 <template id="donations">
     <link rel="stylesheet" href="modules/donationsPanel/donationsPanel.css">
@@ -471,7 +441,7 @@
 </template>
 <template id="characters">
 
-        <h1>Conoce a nuestros luchadores</h1>
+        <h2>Conoce a nuestros luchadores</h2>
         <img
                 style="width:100%"
                 src="./assets/imgs/characters/cartaPersonajes.jpg"
@@ -483,28 +453,7 @@
         </p>
 </template>
 
-<template id="comments-module">
-    <link rel="stylesheet" href="modules/comments/comments.css">
 
-    <div class="comments-container">
-        <h1 id="comments">Comentarios</h1>
-        <p>
-            ¡Queremos saber tu opinión! Déjanos saber tus inquietudes dejando un comentario.
-        </p>
-
-        <form class="comment-form">
-            <label>
-                <input type="text" placeholder="Tu nombre" required>
-            </label>
-            <label>
-                <textarea placeholder="Escribe un comentario..." required></textarea>
-            </label>
-            <button type="submit">Enviar</button>
-        </form>
-
-        <div class="comments-list"></div>
-    </div>
-</template>
 
 <template id="footer-panel">
     <link rel="stylesheet" href="modules/footerPanel/footerPanel.css">
@@ -521,7 +470,6 @@
 <script src="modules/musicPlayerPanel/musicPlayer.js"></script>
 <script src="modules/dressingPanel/dressingPanel.js"></script>
 <script src="js/mainEffects.js"></script>
-<script src="js/comments.js"></script>
 <script src="js/generateTOC.js"></script>
 <link rel="stylesheet" href="modules/sideNav/sideNav.css">
 </body>

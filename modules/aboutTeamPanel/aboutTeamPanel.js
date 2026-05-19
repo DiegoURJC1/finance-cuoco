@@ -47,7 +47,7 @@ const TASKS = Object.freeze({
     COMMENTS_MODULE: {
         name: "Módulo Comentarios",
         desc: "Desarrollo de módulo de comentarios de la web.",
-        link: "../index.html#comments"
+        link: "./faq.html#comments"
     },
     ABOUT_PAGE: {
         name: "Página About",
@@ -111,7 +111,7 @@ const TASKS = Object.freeze({
     SOCIAL_MEDIA_ACCOUNT: {
         name: "Cuenta de Red Social",
         desc: "Crear la cuenta, montar el contenido y poblarla.",
-        link: "../index.html#social-media"
+        link: "./about.html#social-media"
     },
     CONTRIBUTIONS_MODULE: {
         name: "Módulo de Contribuciones",

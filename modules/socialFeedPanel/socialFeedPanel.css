@@ -4,6 +4,12 @@
     gap: 1rem;
 }
 
+.instagram-embed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .twitter-embed iframe,
 .instagram-embed iframe {
     width: 100%;

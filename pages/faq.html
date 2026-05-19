@@ -46,6 +46,8 @@
     }
     ]'></div><!-- template ref -->
 
+    <div class="comments-module"></div><!-- template ref -->
+
     <div class="footer-panel"></div><!-- template ref -->
 </div>
 
@@ -91,6 +93,29 @@
     </div>
 </template>
 
+<template id="comments-module">
+    <link rel="stylesheet" href="../modules/comments/comments.css">
+
+    <div class="comments-container">
+        <h1 id="comments">Comentarios</h1>
+        <p>
+            ¡Queremos saber tu opinión! Déjanos saber tus inquietudes dejando un comentario.
+        </p>
+
+        <form class="comment-form">
+            <label>
+                <input type="text" placeholder="Tu nombre" required>
+            </label>
+            <label>
+                <textarea placeholder="Escribe un comentario..." required></textarea>
+            </label>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div class="comments-list"></div>
+    </div>
+</template>
+
 <template id="footer-panel">
     <link rel="stylesheet" href="../modules/footerPanel/footerPanel.css">
 
@@ -103,6 +128,7 @@
 <script src="../modules/topMenuBar/topMenuOverlay.js"></script>
 <script src="../js/menuToggle.js"></script>
 <script src="../modules/faqPanel/faqPanel.js"></script>
+<script src="../modules/comments/comments.js"></script>
 <script src="../js/generateTOC.js"></script>
 <link rel="stylesheet" href="../modules/sideNav/sideNav.css">
 
