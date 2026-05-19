@@ -5,12 +5,15 @@ function initTopMenuOverlayWarning() {
     let pendingUrl = "";
 
     document.addEventListener('click', (e) => {
-        if (e.target.id === 'gdd-nav-link') {
+        const gddLink = e.target.closest('#gdd-nav-link');
+
+        if (gddLink) {
             e.preventDefault();
-            pendingUrl = e.target.getAttribute('href');
+            pendingUrl = gddLink.getAttribute('href');
 
             const dialog = document.getElementById('gdd-warning-dialog');
             if (dialog) dialog.showModal();
+            return;
         }
 
         if (e.target.id === 'dialog-cancel-btn') {
