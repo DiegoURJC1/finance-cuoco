@@ -132,7 +132,7 @@ function initAboutTeamModule() {
             {
                 name: "DGL",
                 role: "Diseño Web / Programación / Iconos y Diagramas",
-                image: "./assets/imgs/devTeam/diego.png",
+                image: "../assets/imgs/devTeam/diego.png",
                 contributions: [
                     TASKS.WEB_STYLE,
                     TASKS.TABLE_OF_CONTENTS_MODULE,
@@ -150,7 +150,7 @@ function initAboutTeamModule() {
             {
                 name: "JMA",
                 role: "Multimedia / Diseño de Juego",
-                image: "./assets/imgs/devTeam/chus.png",
+                image: "../assets/imgs/devTeam/chus.png",
                 contributions: [
                     TASKS.TRAILER,
                     TASKS.FONT,
@@ -160,7 +160,7 @@ function initAboutTeamModule() {
             {
                 name: "CAG",
                 role: "Arte / Sonido",
-                image: "./assets/imgs/devTeam/carla.png",
+                image: "../assets/imgs/devTeam/carla.png",
                 contributions: [
                     TASKS.COVER_ART,
                     TASKS.SONG,
@@ -172,7 +172,7 @@ function initAboutTeamModule() {
             {
                 name: "PJL",
                 role: "-",
-                image: "./assets/imgs/devTeam/paula.png",
+                image: "../assets/imgs/devTeam/paula.png",
                 contributions: [
                     TASKS.WEB_BACKGROUND,
                     TASKS.GOALS_PANEL,
@@ -183,13 +183,13 @@ function initAboutTeamModule() {
             {
                 name: "FGG",
                 role: "-",
-                image: "./assets/imgs/devTeam/fernando.png",
+                image: "../assets/imgs/devTeam/fernando.png",
                 contributions: []
             },
             {
                 name: "HHJ",
                 role: "-",
-                image: "./assets/imgs/devTeam/hugo.png",
+                image: "../assets/imgs/devTeam/hugo.png",
                 contributions: []
             }
         ];
@@ -198,18 +198,15 @@ function initAboutTeamModule() {
             const card = document.createElement('div');
             card.classList.add('team-card');
 
-            // 2. Modificamos el Header para estructurarlo con flexbox: Imagen a la izquierda, Textos a la derecha
             const header = document.createElement('div');
             header.classList.add('team-card-header');
 
-            // Creamos la imagen cuadrada del integrante
             const imgNode = document.createElement('img');
             imgNode.classList.add('team-member-avatar');
             imgNode.src = member.image || 'https://api.dicebear.com/7.x/bottts/svg?seed=default';
             imgNode.alt = `Avatar de ${member.name}`;
             header.appendChild(imgNode);
 
-            // Contenedor para alinear los textos junto al avatar
             const metaContainer = document.createElement('div');
             metaContainer.classList.add('team-member-meta');
 
@@ -227,7 +224,6 @@ function initAboutTeamModule() {
 
             card.appendChild(header);
 
-            // El renderizado de tareas se mantiene idéntico y limpio
             const taskList = document.createElement('div');
             taskList.classList.add('team-task-list');
 
