@@ -55,7 +55,7 @@ const TASKS = Object.freeze({
         link: "./about.html"
     },
     FAQ_PAGE: {
-        name: "Página About",
+        name: "Página FAQ",
         desc: "Creación de la página FAQ y el módulo de Preguntas Frecuentes.",
         link: "./faq.html"
     },
