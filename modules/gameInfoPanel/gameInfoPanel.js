@@ -21,7 +21,7 @@ function renderAgeRestrictions() {
         const block = document.createElement("div");
         block.classList.add("age-classification");
         block.innerHTML = `
-        <img src="${rating.img}" alt="${rating.name}">
+        <img src="${rating.img}" alt="Clasificiación por edades ${rating.name}">
         <div class="age-restriction-name">${rating.name}</div>
     `;
         ageContainer.appendChild(block);
