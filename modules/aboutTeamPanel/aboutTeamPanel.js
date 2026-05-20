@@ -9,6 +9,10 @@ const TASKS = Object.freeze({
         desc: "Diseño, estructura y estilo de la web.",
         link: "../index.html"
     },
+    ARIA: {
+        name: "ARIA de la Web",
+        desc: "Modificar la web para que cumpla un cierto estandar de accesibilidad y ARIA.",
+    },
     TABLE_OF_CONTENTS_MODULE: {
         name: "Módulo Table Of Contents",
         desc: "Desarrollo de módulo TOC que se genera automáticamente leyendo los contenidos de la página y los muestra en el panel lateral.",
@@ -172,6 +176,7 @@ function initAboutTeamModule() {
                 image: "../assets/imgs/devTeam/diego.png",
                 contributions: [
                     TASKS.WEB_STYLE,
+                    TASKS.ARIA,
                     TASKS.TABLE_OF_CONTENTS_MODULE,
                     TASKS.DRESSING_ICONS,
                     TASKS.GAME_LOGO,

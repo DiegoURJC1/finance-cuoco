@@ -106,7 +106,7 @@
     }
 }
 
-.native-overlay-dialog #title {
+.native-overlay-dialog #dialog-title {
     font-size: 1.3rem; margin: 0 0 12px 0; font-weight: 700;
 }
 

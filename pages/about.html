@@ -8,8 +8,8 @@
 </head>
 <body class="pasta-background">
 <!-- Side Nav Button -->
-<button id="menu-toggle" aria-label="Abrir menú">
-    <span class="icon">☰</span>
+<button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+    <span class="icon" aria-hidden="true">☰</span>
 </button>
 
 <div class="top-menu-bar"></div>
@@ -53,7 +53,7 @@
     </nav>
 
     <dialog id="gdd-warning-dialog" class="native-overlay-dialog">
-        <p id="title">Documento Especializado</p>
+        <p id="dialog-title">Documento Especializado</p>
         <p>
             Estás a punto de salir del sitio web principal para acceder al documento de diseño del juego (GDD).
             Aquí podrás ver en detalle el videojuego y su visión.
