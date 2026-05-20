@@ -46,21 +46,7 @@
 
     <div class="alert-panel"></div><!-- template ref -->
     <div class="game-description"></div><!-- template ref -->
-    <div class="video-container reveal">
-        <video id="main-trailer" width="100%">
-            <source src="./assets/videos/trailer.mp4" type="video/mp4">
-        </video>
-        <div class="video-controls">
-            <div class="video-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progreso del vídeo">
-                <div class="progress-bar-fill"></div>
-            </div>
-            <div class="video-btns">
-                <button id="v-play" aria-pressed="false" aria-label="Reproducir vídeo">PLAY</button>
-                <div class="video-title-overlay" aria-label="Nombre del archivo">CUOCO_TRAILER_01.MP4</div>
-                <button id="v-mute" aria-pressed="false" aria-label="Silenciar vídeo">MUTE</button>
-            </div>
-        </div>
-    </div>
+    <div class="video-container-ref reveal"></div><!-- template ref -->
     <h1>Estilo y visuales</h1>
 
 
@@ -193,6 +179,45 @@
         representa un producto real. Práctica de Multimedia, 1º GDDV - Curso 25/26
         (Móstoles/Quintana), URJC. La URJC no se hace responsable del contenido expuesto por el
         autor.
+    </div>
+</template>
+
+<template id="video-player-panel">
+    <link rel="stylesheet" href="modules/videoPlayer/videoPlayer.css">
+
+    <div class="video-wrapper" role="region" aria-label="Reproductor de vídeo promocional">
+        <video id="main-trailer" width="100%">
+            <source src="./assets/videos/trailer.mp4" type="video/mp4">
+            Tu navegador no soporta vídeos incrustados.
+        </video>
+
+        <!-- Controles personalizados -->
+        <div class="video-controls" role="toolbar" aria-label="Controles del vídeo">
+
+            <div class="progress-container">
+                <label for="v-progress" class="sr-only">Línea de tiempo del vídeo</label>
+                <input type="range" id="v-progress" min="0" max="100" value="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            </div>
+
+            <div class="video-btns">
+                <div class="left-controls">
+                    <button id="v-play" aria-pressed="false" aria-label="Reproducir">PLAY</button>
+
+                    <div class="volume-control-wrapper">
+                        <button id="v-mute" aria-pressed="false" aria-label="Silenciar">MUTE</button>
+                        <label for="v-volume" class="sr-only">Volumen</label>
+                        <input type="range" id="v-volume" min="0" max="1" step="0.05" value="1">
+                    </div>
+                </div>
+
+                <div class="video-title-overlay" aria-hidden="true">CUOCO COOKED TRAILER</div>
+
+                <div class="right-controls">
+                    <span id="v-time" class="video-time-display" aria-label="Tiempo actual y duración">00:00 / 00:00</span>
+                    <button id="v-fullscreen" aria-label="Pantalla completa">FULLSCREEN</button>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -512,6 +537,7 @@
 <!-- code -->
 <script src="js/templateReplacer.js"></script>
 <script src="modules/topMenuBar/topMenuOverlay.js"></script>
+<script src="modules/videoPlayer/videoPlayer.js"></script>
 <script src="js/menuToggle.js"></script>
 <script src="modules/donationsPanel/donationsPanel.js"></script>
 <script src="modules/musicPlayerPanel/musicPlayer.js"></script>

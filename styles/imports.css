@@ -3,7 +3,7 @@
 @import "common.css";
 @import "background.css";
 @import "../modules/mainContent/mainContent.css";
-@import "../modules/musicPlayerPanel/musicPlayer.css";
 @import "../modules/topMenuBar/topMenuBar.css";
 /* pages */
 @import "index.css";
+@import "../modules/videoPlayer/videoPlayer.css";
