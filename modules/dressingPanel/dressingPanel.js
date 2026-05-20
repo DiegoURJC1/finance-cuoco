@@ -68,7 +68,7 @@ function initDressingPanel() {
         dressings.forEach(dressing => {
 
             temp.innerHTML = `
-            <h2>${dressing.name}</h2>
+            <p class="dressing-name">${dressing.name}</p>
             <p>${dressing.description}</p>
         `;
 

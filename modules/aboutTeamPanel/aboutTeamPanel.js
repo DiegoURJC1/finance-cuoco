@@ -118,6 +118,24 @@ const TASKS = Object.freeze({
         desc: "Diseño y creación del módulo de Contribuciones.",
         link: "../index.html#contributions"
     },
+    MERCHANDISING_PANEL: {
+        name: "Panel de merchandising",
+        desc: "Creación del panel de merchandising y maquetación de las imágenes relacionadas.",
+        link: "../index.html#merchandising"
+    },
+    MEET_THE_CAST: {
+        name: "Conoce al plantel",
+        desc: "Maquetado de la carta de menú de personajes jugables.",
+        link: "../index.html#meet-the-cast"
+    },
+    TEXT_CONTENT: {
+        name: "Desarrollo de contenidos",
+        desc: "Redacción de los contenidos de la web.",
+    },
+    COHERENCE: {
+        name: "Coherencia de contenidos",
+        desc: "Revisión de los contenidos y su coherencia.",
+    },
 });
 
 function initAboutTeamModule() {
@@ -129,6 +147,25 @@ function initAboutTeamModule() {
         if (!grid) return;
 
         const teamData = [
+            {
+                name: "HHJ",
+                role: "Redacción / Narración",
+                image: "../assets/imgs/devTeam/hugo.png",
+                contributions: [
+                    TASKS.TEXT_CONTENT,
+                    TASKS.COHERENCE
+                ]
+            },
+            {
+                name: "JMA",
+                role: "Multimedia / Diseño de Juego",
+                image: "../assets/imgs/devTeam/chus.png",
+                contributions: [
+                    TASKS.TRAILER,
+                    TASKS.FONT,
+                    TASKS.DRESSING_SYSTEM
+                ]
+            },
             {
                 name: "DGL",
                 role: "Diseño Web / Programación / Iconos y Diagramas",
@@ -148,14 +185,10 @@ function initAboutTeamModule() {
                 ]
             },
             {
-                name: "JMA",
-                role: "Multimedia / Diseño de Juego",
-                image: "../assets/imgs/devTeam/chus.png",
-                contributions: [
-                    TASKS.TRAILER,
-                    TASKS.FONT,
-                    TASKS.DRESSING_SYSTEM
-                ]
+                name: "FGG",
+                role: "-",
+                image: "../assets/imgs/devTeam/fernando.png",
+                contributions: []
             },
             {
                 name: "CAG",
@@ -171,27 +204,17 @@ function initAboutTeamModule() {
             },
             {
                 name: "PJL",
-                role: "-",
+                role: "Multimedia / Desarrollo Web",
                 image: "../assets/imgs/devTeam/paula.png",
                 contributions: [
                     TASKS.WEB_BACKGROUND,
                     TASKS.GOALS_PANEL,
                     TASKS.SOCIAL_MEDIA_ACCOUNT,
-                    TASKS.CONTRIBUTIONS_MODULE
+                    TASKS.CONTRIBUTIONS_MODULE,
+                    TASKS.MERCHANDISING_PANEL,
+                    TASKS.MEET_THE_CAST
                 ]
             },
-            {
-                name: "FGG",
-                role: "-",
-                image: "../assets/imgs/devTeam/fernando.png",
-                contributions: []
-            },
-            {
-                name: "HHJ",
-                role: "-",
-                image: "../assets/imgs/devTeam/hugo.png",
-                contributions: []
-            }
         ];
 
         teamData.forEach(member => {
