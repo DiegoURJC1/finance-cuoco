@@ -233,7 +233,7 @@ function initAboutTeamModule() {
             const metaContainer = document.createElement('div');
             metaContainer.classList.add('team-member-meta');
 
-            const nameNode = document.createElement('h3');
+            const nameNode = document.createElement('h2');
             nameNode.classList.add('team-member-name');
             nameNode.textContent = member.name;
 
