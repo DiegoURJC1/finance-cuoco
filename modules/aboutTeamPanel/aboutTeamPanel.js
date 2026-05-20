@@ -9,6 +9,16 @@ const TASKS = Object.freeze({
         desc: "Diseño, estructura y estilo de la web.",
         link: "../index.html"
     },
+    WEB_GDD: {
+        name: "Creación de la Web GDD",
+        desc: "Diseño, estructura y estilo de la web del documento de diseño de Juego. Creación de diagramas, módulos, iconos y desarrollo completo del personaje John Grinder",
+        link: "https://diegourjc1.github.io/Cuoco_Coocked_GDD/"
+    },
+    CHARACTER_CREATE: {
+        name: "Creación de personaje",
+        desc: "Creación y desarrollo de alguna de las facetas de un personaje del juego.",
+        link: "https://diegourjc1.github.io/Cuoco_Coocked_GDD/"
+    },
     ARIA: {
         name: "ARIA de la Web",
         desc: "Modificar la web para que cumpla un cierto estandar de accesibilidad y ARIA.",
@@ -140,6 +150,10 @@ const TASKS = Object.freeze({
         name: "Coherencia de contenidos",
         desc: "Revisión de los contenidos y su coherencia.",
     },
+    STORY: {
+        name: "Narración del Juego",
+        desc: "Desarrollo de la narración del juego."
+    }
 });
 
 function initAboutTeamModule() {
@@ -167,7 +181,8 @@ function initAboutTeamModule() {
                 contributions: [
                     TASKS.TRAILER,
                     TASKS.FONT,
-                    TASKS.DRESSING_SYSTEM
+                    TASKS.DRESSING_SYSTEM,
+                    TASKS.CHARACTER_CREATE
                 ]
             },
             {
@@ -176,6 +191,8 @@ function initAboutTeamModule() {
                 image: "../assets/imgs/devTeam/diego.png",
                 contributions: [
                     TASKS.WEB_STYLE,
+                    TASKS.WEB_GDD,
+                    TASKS.CHARACTER_CREATE,
                     TASKS.ARIA,
                     TASKS.TABLE_OF_CONTENTS_MODULE,
                     TASKS.DRESSING_ICONS,
@@ -191,9 +208,12 @@ function initAboutTeamModule() {
             },
             {
                 name: "FGG",
-                role: "-",
+                role: "Narración",
                 image: "../assets/imgs/devTeam/fernando.png",
-                contributions: []
+                contributions: [
+                    TASKS.STORY,
+                    TASKS.CHARACTER_CREATE
+                ]
             },
             {
                 name: "CAG",
@@ -204,7 +224,8 @@ function initAboutTeamModule() {
                     TASKS.SONG,
                     TASKS.UI_DESIGN,
                     TASKS.CHARACTER_ART,
-                    TASKS.BACKGROUND_ART
+                    TASKS.BACKGROUND_ART,
+                    TASKS.CHARACTER_CREATE
                 ]
             },
             {
